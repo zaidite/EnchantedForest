@@ -4,6 +4,23 @@
     <configurations>
       <configuration name="project-home" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/../sources/output">
         <dependencies target-player="12.0">
+          <entries>
+            <entry library-name="bulk_loader" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Console2.6" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="EazeTween-rc2" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="MonsterDebugger" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="PureMVC_AS3_2_0_4" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="Apache 4.11" />
         </dependencies>
         <compiler-options />
@@ -22,6 +39,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Apache 4.11" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="bulk_loader" level="project" />
+    <orderEntry type="library" exported="" name="Console2.6" level="project" />
+    <orderEntry type="library" exported="" name="EazeTween-rc2" level="project" />
+    <orderEntry type="library" exported="" name="MonsterDebugger" level="project" />
+    <orderEntry type="library" exported="" name="PureMVC_AS3_2_0_4" level="project" />
   </component>
 </module>
 

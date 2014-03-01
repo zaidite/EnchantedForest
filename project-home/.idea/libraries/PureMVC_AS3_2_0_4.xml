@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PureMVC_AS3_2_0_4" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sources/libs/PureMVC_AS3_2_0_4.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
