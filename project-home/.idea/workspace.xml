@@ -69,10 +69,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.43509272" vertical-offset="751" max-vertical-offset="1672">
+            <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1100">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameConfig.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameConfig.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="61" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameViews.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/view/GameViews.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="968">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFacade.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.28654125" vertical-offset="440" max-vertical-offset="1716">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetStartData.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="77" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1100">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Core.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="34" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlashVarsProxy.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1320">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameNotifications.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
               <folding />
             </state>
           </provider>
@@ -108,7 +171,21 @@
       <list>
         <option value="$PROJECT_DIR$/../sources/src/zUtils/service/Alert.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/content/Content.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/ApplicationFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/ApplicationFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/view/ApplicationViews.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/ApplicationFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/GameFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/GameConfig.as" />
+        <option value="$PROJECT_DIR$/../sources/src/constannts/Notifications.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/view/GameViews.as" />
+        <option value="$PROJECT_DIR$/../sources/src/temp/ApplicationViews.as" />
         <option value="$PROJECT_DIR$/../sources/src/Main.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/Core.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/GameNotifications.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
       </list>
     </option>
   </component>
@@ -168,6 +245,20 @@
               <option name="myItemId" value="sources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnchantedForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -191,7 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zUtils" />
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -213,11 +304,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zUtils" />
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
+              <option name="myItemId" value="proxy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,7 +326,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,7 +365,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sources/libs/PureMVC_AS3_2_0_4.swc!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../GoGames/GoFishingNew/project" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -274,10 +373,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../sources/src/core/view" />
+      <recent name="$PROJECT_DIR$/../sources/src/zUtils" />
       <recent name="$PROJECT_DIR$/../sources/libs/bulkloader" />
       <recent name="$PROJECT_DIR$/../sources/src/zUtils/service" />
-      <recent name="$PROJECT_DIR$/../sources/src/zUtils" />
       <recent name="$PROJECT_DIR$/../sources/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../sources/src/core" />
+      <recent name="$PROJECT_DIR$/../sources/src" />
+      <recent name="$PROJECT_DIR$/../sources/src/temp" />
     </key>
   </component>
   <component name="RunManager" selected="Flash App.project-home">
@@ -543,12 +648,32 @@
       <changelist id="2675e09b-68d8-4c96-a599-a868fe1c4e0d" name="Default" comment="" />
       <created>1393707635745</created>
       <updated>1393707635745</updated>
-      <workItem from="1393707640967" duration="5682000" />
+      <workItem from="1393707640967" duration="11248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5682000" />
+    <option name="totallyTimeSpent" value="11248000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="814" extended-state="6" />
@@ -569,12 +694,12 @@
       <window_info id="IDEtalk" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40028188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24806201" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24806201" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -610,9 +735,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/service/Alert.as">
+    <entry file="jar://$PROJECT_DIR$/../sources/libs/PureMVC_AS3_2_0_4.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="290" column="0" selection-start="8300" selection-end="8300" vertical-scroll-proportion="0.0" vertical-offset="4645" max-vertical-offset="6534">
+        <state line="127" column="13" selection-start="5373" selection-end="5373" vertical-scroll-proportion="0.33238232" vertical-offset="2561" max-vertical-offset="6886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameConfig.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
           <folding />
         </state>
       </provider>
@@ -624,9 +756,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/service/Alert.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="0" selection-start="8300" selection-end="8300" vertical-scroll-proportion="0.0" vertical-offset="4645" max-vertical-offset="6534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/view/GameViews.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="968">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.43509272" vertical-offset="751" max-vertical-offset="1672">
+        <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="34" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="77" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.28654125" vertical-offset="440" max-vertical-offset="1716">
           <folding />
         </state>
       </provider>
