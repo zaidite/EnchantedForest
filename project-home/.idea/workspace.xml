@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2675e09b-68d8-4c96-a599-a868fe1c4e0d" name="Default" comment="" />
+    <list default="true" id="2675e09b-68d8-4c96-a599-a868fe1c4e0d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/core/GameFacade.as" afterPath="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="EnchantedForest.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,91 +82,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
+      <file leaf-file-name="ZRequests.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1100">
+            <state line="46" column="85" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.075630255" vertical-offset="958" max-vertical-offset="2794">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameConfig.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameConfig.as">
+      <file leaf-file-name="NetConnectionProcessing.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="61" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+            <state line="18" column="78" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="770">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameViews.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/view/GameViews.as">
+      <file leaf-file-name="UrlLoaderProcessing.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="968">
+            <state line="52" column="74" selection-start="1546" selection-end="1576" vertical-scroll-proportion="0.0" vertical-offset="906" max-vertical-offset="2200">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameFacade.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
+      <file leaf-file-name="RequestProxy.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.28654125" vertical-offset="440" max-vertical-offset="1716">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetStartData.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="77" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Core.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="704">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlashVarsProxy.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1320">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameNotifications.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Content.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/content/Content.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="2530" max-vertical-offset="4818">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Alert.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/service/Alert.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="290" column="0" selection-start="8300" selection-end="8300" vertical-scroll-proportion="0.0" vertical-offset="4645" max-vertical-offset="6534">
+            <state line="27" column="39" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1232">
               <folding />
             </state>
           </provider>
@@ -165,6 +124,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -186,6 +148,18 @@
         <option value="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" />
         <option value="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" />
         <option value="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMFProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as" />
       </list>
     </option>
   </component>
@@ -194,7 +168,7 @@
     <option name="width" value="1440" />
     <option name="height" value="814" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -282,7 +256,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="zUtils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,11 +278,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="zUtils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="proxy" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,11 +304,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="zUtils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnchantedForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zUtils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,7 +375,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.sourceCode.ActionScript" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -372,6 +388,11 @@
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="zUtils.net.server.processing.requests" />
+      <recent name="zUtils.net.server.processing.data" />
+      <recent name="zUtils.net.server" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../sources/src/core/view" />
       <recent name="$PROJECT_DIR$/../sources/src/zUtils" />
@@ -643,17 +664,52 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2675e09b-68d8-4c96-a599-a868fe1c4e0d" name="Default" comment="" />
       <created>1393707635745</created>
-      <updated>1393707635745</updated>
-      <workItem from="1393707640967" duration="11248000" />
+      <updated>1393774738810</updated>
+      <workItem from="1393707640967" duration="11434000" />
+      <workItem from="1393761132880" duration="5000" />
+      <workItem from="1393761193927" duration="105000" />
+      <workItem from="1393761313001" duration="22000" />
+      <workItem from="1393761357028" duration="4000" />
+      <workItem from="1393761391052" duration="3000" />
+      <workItem from="1393761402061" duration="4000" />
+      <workItem from="1393774739483" duration="11054000" />
     </task>
+    <task id="LOCAL-00004" summary="Game">
+      <created>1393761333143</created>
+      <updated>1393774738747</updated>
+      <workItem from="1393761335014" duration="22000" />
+      <workItem from="1393761361051" duration="30000" />
+      <workItem from="1393761394056" duration="8000" />
+      <workItem from="1393761406065" duration="1222000" />
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <option name="createChangelist" value="false" />
+    <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11248000" />
+    <option name="totallyTimeSpent" value="24067000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -699,7 +755,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40028188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24806201" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24806201" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -742,58 +798,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameConfig.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="61" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/content/Content.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="4818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/service/Alert.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="290" column="0" selection-start="8300" selection-end="8300" vertical-scroll-proportion="0.0" vertical-offset="4645" max-vertical-offset="6534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/view/GameViews.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
@@ -805,9 +812,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/content/Content.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="-2.039943" vertical-offset="2002" max-vertical-offset="4818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.43137255" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.71754634" vertical-offset="619" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/view/GameViews.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.85714287" vertical-offset="158" max-vertical-offset="968">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameConfig.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="271" selection-end="271" vertical-scroll-proportion="0.40056023" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.28654125" vertical-offset="440" max-vertical-offset="1716">
+        <state line="28" column="9" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="1694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.62339514" vertical-offset="399" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="26" selection-start="503" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="726">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="49" selection-start="520" selection-end="520" vertical-scroll-proportion="0.22286542" vertical-offset="264" max-vertical-offset="1452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="501" selection-end="501" vertical-scroll-proportion="0.48672566" vertical-offset="88" max-vertical-offset="1628">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="49" selection-start="499" selection-end="499" vertical-scroll-proportion="0.35103244" vertical-offset="180" max-vertical-offset="1606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="36" selection-start="266" selection-end="281" vertical-scroll-proportion="0.38205498" vertical-offset="0" max-vertical-offset="691">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="51" selection-start="343" selection-end="386" vertical-scroll-proportion="0.13725491" vertical-offset="232" max-vertical-offset="1144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="369" selection-end="369" vertical-scroll-proportion="0.46218488" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="39" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="74" selection-start="1546" selection-end="1576" vertical-scroll-proportion="0.0" vertical-offset="906" max-vertical-offset="2200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="78" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="85" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.075630255" vertical-offset="958" max-vertical-offset="2794">
           <folding />
         </state>
       </provider>

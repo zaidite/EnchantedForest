@@ -39,7 +39,6 @@ package core {
 			sendNotification(GameNotifications.STARTUP, app);
 		}
 
-
 		override protected function initializeView():void {
 			super.initializeView();
 		}
