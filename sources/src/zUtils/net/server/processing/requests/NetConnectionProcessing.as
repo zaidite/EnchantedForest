@@ -13,10 +13,10 @@ package zUtils.net.server.processing.requests {
 	 */
 	public class NetConnectionProcessing implements IRequestProcessing {
 
-		public static const TYPE : String = 'netConnection';
+		public static const TYPE:String = 'netConnection';
 
 		//*********************** CONSTRUCTOR ***********************
-		public function NetConnectionProcessing(dataProcessing:IDataProcessing) {
+		public function NetConnectionProcessing(dataProcessing:IDataProcessing, onComplete:Function, onError:Function) {
 		}
 		//***********************************************************
 

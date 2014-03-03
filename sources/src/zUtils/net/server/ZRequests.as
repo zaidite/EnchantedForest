@@ -68,17 +68,25 @@ package zUtils.net.server {
 		}
 
 
-		private function _getRequestProcessing(requestType:String,
-											   dataProcessing:IDataProcessing):IRequestProcessing {
+		private function _processingComplete(proxy:IRequestProxy):void {
+
+		}
+
+		private function _processingError(proxy:IRequestProxy, error:String) : void
+		{
+
+		}
+
+		private function _getRequestProcessing(requestType:String, dataProcessing:IDataProcessing):IRequestProcessing {
 
 			var processing:IRequestProcessing;
 
 			switch(requestType) {
 				case UrlLoaderProcessing.TYPE:
-					processing = new UrlLoaderProcessing(dataProcessing);
+					processing = new UrlLoaderProcessing(dataProcessing, _processingComplete, _processingError);
 					break;
 				case NetConnectionProcessing.TYPE:
-					processing = new NetConnectionProcessing(dataProcessing);
+					processing = new NetConnectionProcessing(dataProcessing, _processingComplete, _processingError);
 					break;
 			}
 			return processing;

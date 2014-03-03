@@ -1,4 +1,5 @@
 package zUtils.net.server.processing.requests {
+	import flash.display.Loader;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.events.SecurityErrorEvent;
@@ -26,47 +27,33 @@ package zUtils.net.server.processing.requests {
 		private var _loader:URLLoader;
 		private var _currentRequestProxy:IRequestProxy;
 		private var _dataFormat:String;
-		private var _dataProcessing : IDataProcessing ;
+		private var _dataProcessing:IDataProcessing;
+		private var _processingComplete:Function;
+		private var _processingError:Function;
 
-		private function get request():URLRequest {
-			if(!_request) {
-				_request = new URLRequest();
-				_request.method = _method;
-			}
-			return _request;
-		}
-
-		private function get loader():URLLoader {
-			if(!_loader) {
-				_loader = new URLLoader();
-				_loader.dataFormat = _dataFormat;
-				_loader.addEventListener(Event.COMPLETE, _onLoadComplete);
-				_loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
-				_loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
-			}
-			return _loader;
-		}
-
-		public static const TYPE : String = 'urlRequest';
+		public static const TYPE:String = 'urlRequest';
 
 		//*********************** CONSTRUCTOR ***********************
-		public function UrlLoaderProcessing(dataProcessing:IDataProcessing) {
+		public function UrlLoaderProcessing(dataProcessing:IDataProcessing, onComplete:Function, onError:Function) {
 			_dataProcessing = dataProcessing;
 			_method = URLRequestMethod.POST;
 			_dataFormat = URLLoaderDataFormat.BINARY;
+			_processingComplete = onComplete;
+			_processingError = onError;
 		}
 		//***********************************************************
 
 		public function start(proxy:IRequestProxy) {
 			_currentRequestProxy = proxy;
 
-			var request:URLRequest = request;
+			var request:URLRequest = _getRequest();
 			request.url = _currentRequestProxy.url;
 
 			if(_currentRequestProxy.params) {
 				request.data = _processingParams(_currentRequestProxy.params);
 			}
 
+			var loader:URLLoader = _getLoader();
 			loader.load(request);
 		}
 
@@ -77,17 +64,49 @@ package zUtils.net.server.processing.requests {
 
 		private function _processingParams(params:Object):Object {
 
+			//кодирование параметров запроса
 			return null
 		}
 
 
-		private function _onSecurityError(event:SecurityErrorEvent):void {
+		private function _getRequest():URLRequest {
+			if(!_request) {
+				_request = new URLRequest();
+				_request.method = _method;
+			}
+			return _request;
+		}
 
+		private function _getLoader():URLLoader {
+			if(!_loader) {
+				_loader = new URLLoader();
+				_loader.dataFormat = _dataFormat;
+				_loader.addEventListener(Event.COMPLETE, _onLoadComplete);
+				_loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
+				_loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
+			}
+			return _loader;
+		}
+
+
+		private function _onSecurityError(event:SecurityErrorEvent):void {
+			if(_processingError != null) {
+				_processingError(_currentRequestProxy, event.toString());
+			}
 		}
 		private function _onLoadFail(event:IOErrorEvent):void {
+			if(_processingError != null) {
+				_processingError(_currentRequestProxy, event.toString());
+			}
 
 		}
 		private function _onLoadComplete(event:Event):void {
+
+			//декодирование данных ответа
+
+			if(_processingComplete != null) {
+				_processingComplete(_currentRequestProxy);
+			}
 
 		}
 
