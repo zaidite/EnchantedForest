@@ -13,6 +13,7 @@ package core {
 
 		public static const STARTUP:String = 'startUp';
 		public static const GETTING_FLASH_VARS:String = 'gettingFlashVars';
+		public static const GETTING_FETCH_PLAYER:String = 'gettingFetchPlayer';
 
 
 	} //end class

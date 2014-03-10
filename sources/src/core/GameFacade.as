@@ -1,10 +1,16 @@
 package core {
 	import core.controllers.GetStartData;
 	import core.proxy.FlashVarsProxy;
+	import core.proxy.requests.FetchPlayerProxy;
+	import core.proxy.valueObjects.FlashVarsVO;
 	import core.view.GameViews;
 
 	import org.puremvc.as3.interfaces.IFacade;
 	import org.puremvc.as3.patterns.facade.Facade;
+
+	import zUtils.net.server.ZRequests;
+	import zUtils.net.server.processing.requests.UrlLoaderProcessing;
+	import zUtils.service.ZParsing;
 
 	/**
 	 * Date   :  02.03.14
@@ -18,7 +24,7 @@ package core {
 	public class GameFacade extends Facade implements IFacade {
 
 		private var _main:Main;
-		private var _gameViews : GameViews ;
+		private var _gameViews:GameViews;
 
 		private static var _instance:GameFacade;
 
@@ -29,7 +35,25 @@ package core {
 		}
 		//***********************************************************
 
+		//init 1
+		override protected function initializeModel():void {
+			super.initializeModel();
+			registerProxy(new FlashVarsProxy());
+		}
 
+		//init 2
+		override protected function initializeController():void {
+			super.initializeController();
+			registerCommand(GameNotifications.STARTUP, GetStartData);
+			registerCommand(GameNotifications.GETTING_FLASH_VARS, GetStartData);
+		}
+
+		//init 3
+		override protected function initializeView():void {
+			super.initializeView();
+		}
+
+		//init 4
 		public function startup(app:Main):void {
 			_main = app;
 
@@ -39,22 +63,18 @@ package core {
 			sendNotification(GameNotifications.STARTUP, app);
 		}
 
-		override protected function initializeView():void {
-			super.initializeView();
+		public function initCore():void {
+			ZRequests.manager().init(UrlLoaderProcessing.TYPE, Core.flashVarsProxy.dataFormat);
+
+			_initRequestsProxy();
 		}
 
-		override protected function initializeModel():void {
-			super.initializeModel();
 
-			registerProxy(new FlashVarsProxy());
+		private function _initRequestsProxy():void {
+			var fetchPlayer:FetchPlayerProxy = new FetchPlayerProxy(Core.flashVarsProxy.serverUrl);
+			ZRequests.manager().registerProxy(fetchPlayer);
+
 		}
-
-		override protected function initializeController():void {
-			super.initializeController();
-			registerCommand(GameNotifications.STARTUP, GetStartData);
-			registerCommand(GameNotifications.GETTING_FLASH_VARS, GetStartData);
-		}
-
 
 		public static function instance():GameFacade {
 			if(_instance == null) {

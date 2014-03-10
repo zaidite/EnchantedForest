@@ -17,7 +17,7 @@ package zUtils.net.server.processing.data {
 		private var _encoder:Function;
 		private var _decoder:Function;
 
-		public static const TYPE : String = 'json';
+		public static const TYPE:String = 'json';
 
 		//*********************** CONSTRUCTOR ***********************
 		public function JSONProcessing() {
@@ -44,9 +44,14 @@ package zUtils.net.server.processing.data {
 			return bytes;
 		}
 
-		public function decode(bytes:ByteArray):Object {
+		public function decode(data:Object):Object {
+			var bytes:ByteArray = new ByteArray();
+			bytes.writeObject(data);
 			var str:String = bytes.toString();
-			return decodeString(str);
+
+			bytes.writeUTFBytes(str);
+			return bytes;
+
 		}
 
 		public function encodeString(data:Object):String {

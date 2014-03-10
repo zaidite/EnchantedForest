@@ -7,6 +7,7 @@ package zUtils.net.server.processing.requests {
 	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLRequest;
 	import flash.net.URLRequestMethod;
+	import flash.system.LoaderContext;
 
 	import zUtils.net.server.IRequestProxy;
 	import zUtils.net.server.processing.data.IDataProcessing;
@@ -25,7 +26,7 @@ package zUtils.net.server.processing.requests {
 		private var _request:URLRequest;
 		private var _method:String;
 		private var _loader:URLLoader;
-		private var _currentRequestProxy:IRequestProxy;
+		private var _currentProxy:IRequestProxy;
 		private var _dataFormat:String;
 		private var _dataProcessing:IDataProcessing;
 		private var _processingComplete:Function;
@@ -43,31 +44,26 @@ package zUtils.net.server.processing.requests {
 		}
 		//***********************************************************
 
-		public function start(proxy:IRequestProxy) {
-			_currentRequestProxy = proxy;
+		public function start(proxy:IRequestProxy):void {
+			_currentProxy = proxy;
 
 			var request:URLRequest = _getRequest();
-			request.url = _currentRequestProxy.url;
+			request.url = _currentProxy.url;
 
-			if(_currentRequestProxy.params) {
-				request.data = _processingParams(_currentRequestProxy.params);
+			if(_currentProxy.params) {
+				request.data = _dataProcessing.decode(_currentProxy.params);
 			}
 
 			var loader:URLLoader = _getLoader();
+			loader.addEventListener(Event.COMPLETE, _onLoadComplete);
+			loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
+			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
 			loader.load(request);
 		}
 
 
 		public function clearData():void {
 		}
-
-
-		private function _processingParams(params:Object):Object {
-
-			//кодирование параметров запроса
-			return null
-		}
-
 
 		private function _getRequest():URLRequest {
 			if(!_request) {
@@ -90,23 +86,30 @@ package zUtils.net.server.processing.requests {
 
 
 		private function _onSecurityError(event:SecurityErrorEvent):void {
+			trace('[UrlLoaderProcessing] _onSecurityError()', arguments);
+
 			if(_processingError != null) {
-				_processingError(_currentRequestProxy, event.toString());
+				_processingError(_currentProxy, event.toString());
 			}
+			_currentProxy = null;
 		}
 		private function _onLoadFail(event:IOErrorEvent):void {
-			if(_processingError != null) {
-				_processingError(_currentRequestProxy, event.toString());
-			}
+			trace('[UrlLoaderProcessing] _onLoadFail()', arguments);
 
+			if(_processingError != null) {
+				_processingError(_currentProxy, event.toString());
+			}
+			_currentProxy = null;
 		}
 		private function _onLoadComplete(event:Event):void {
-
 			//декодирование данных ответа
 
+			trace('[UrlLoaderProcessing] _onLoadComplete()', arguments);
+
 			if(_processingComplete != null) {
-				_processingComplete(_currentRequestProxy);
+				_processingComplete(_currentProxy);
 			}
+			_currentProxy = null;
 
 		}
 

@@ -17,7 +17,7 @@ package zUtils.net.server.processing.data {
 		private var _encoder:Function;
 		private var _decoder:Function;
 
-		public static const TYPE : String = 'xjson';
+		public static const TYPE:String = 'xjson';
 
 		//*********************** CONSTRUCTOR ***********************
 		public function XJSONProcessing() {
@@ -45,7 +45,9 @@ package zUtils.net.server.processing.data {
 			return bytes;
 		}
 
-		public function decode(bytes:ByteArray):Object {
+		public function decode(data:Object):Object {
+			var bytes:ByteArray = new ByteArray();
+			bytes.writeObject(data);
 			bytes.uncompress();
 			return decodeString(bytes.toString());
 		}

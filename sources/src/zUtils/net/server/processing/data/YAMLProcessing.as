@@ -17,7 +17,7 @@ package zUtils.net.server.processing.data {
 		private static var _encoder:Function;
 		private static var _decoder:Function;
 
-		public static const TYPE : String = 'yaml';
+		public static const TYPE:String = 'yaml';
 
 		//*********************** CONSTRUCTOR ***********************
 		public function YAMLProcessing() {
@@ -38,7 +38,9 @@ package zUtils.net.server.processing.data {
 			return bytes;
 		}
 
-		public function decode(bytes:ByteArray):Object {
+		public function decode(data:Object):Object {
+			var bytes:ByteArray = new ByteArray();
+			bytes.writeObject(data);
 			var str:String = bytes.toString();
 			return decodeString(str);
 		}

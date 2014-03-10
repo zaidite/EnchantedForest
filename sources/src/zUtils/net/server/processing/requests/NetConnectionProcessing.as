@@ -20,7 +20,7 @@ package zUtils.net.server.processing.requests {
 		}
 		//***********************************************************
 
-		public function start(proxy:IRequestProxy) {
+		public function start(proxy:IRequestProxy):void {
 		}
 
 

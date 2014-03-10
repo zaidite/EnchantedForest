@@ -1,11 +1,11 @@
 package core.proxy {
 	import core.GameNotifications;
+	import core.proxy.valueObjects.FlashVarsVO;
 
 	import org.puremvc.as3.interfaces.IProxy;
 	import org.puremvc.as3.patterns.proxy.Proxy;
 
 	import zUtils.content.Content;
-	import zUtils.service.ZParsing;
 
 	/**
 	 * Date   :  02.03.14
@@ -25,11 +25,15 @@ package core.proxy {
 			return _flashVars;
 		}
 
+		public function get dataFormat():String { return _flashVars[FlashVarsVO.DATA_FORMAT];}
+		public function get serverUrl():String { return _flashVars[FlashVarsVO.LOGIN_SERVER_URL];}
+		public function get playerID():String {return _flashVars[FlashVarsVO.PLAYER_ID];}
+		public function get sid():String {return _flashVars[FlashVarsVO.SID];}
+
 		public static const FLASH_VARS_URL:String = '../static/flashVars.json';
 		public static const FLASH_VARS:String = 'flashVars';
 
-		public static const NAME : String = 'FlashVarsProxy';
-
+		public static const NAME:String = 'FlashVarsProxy';
 
 		//*********************** CONSTRUCTOR ***********************
 		public function FlashVarsProxy() {
@@ -50,6 +54,7 @@ package core.proxy {
 			_flashVars = Content.manager().getDataFromJSON(FLASH_VARS);
 			sendNotification(GameNotifications.GETTING_FLASH_VARS, _flashVars);
 		}
+
 
 	} //end class
 }//end package

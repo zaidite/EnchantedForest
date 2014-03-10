@@ -9,6 +9,7 @@ package zUtils.net.server {
 	import zUtils.net.server.processing.requests.IRequestProcessing;
 	import zUtils.net.server.processing.requests.NetConnectionProcessing;
 	import zUtils.net.server.processing.requests.UrlLoaderProcessing;
+	import zUtils.service.ZParsing;
 
 	/**
 	 * Date   :  02.03.14
@@ -25,6 +26,7 @@ package zUtils.net.server {
 		private var _defaultRequestType:String;
 		private var _requestProcessing:IRequestProcessing;
 		private var _dataProcessing:IDataProcessing;
+		private var _proxySet:Object = {};
 
 
 		public function get defaultDataFormat():String {return _defaultDataFormat;}
@@ -47,6 +49,9 @@ package zUtils.net.server {
 				throw IllegalOperationError('[ZRequests] init() : dataFormat is null. ');
 
 			}
+
+			trace('[ZRequests] init()', arguments);
+
 			_defaultRequestType = requestType;
 			_defaultDataFormat = dataFormat;
 
@@ -56,25 +61,25 @@ package zUtils.net.server {
 
 
 		public function registerProxy(proxy:IRequestProxy):void {
-
+			if(!_proxySet[proxy.name]) {
+				_proxySet[proxy.name] = proxy;
+			}
 		}
 
 		public function getProxy(name:String):IRequestProxy {
-			return null;
+			return _proxySet[name] ? _proxySet[name] : null;
 		}
 
 		public function requestStart(request:IRequestProxy):void {
-
+			_requestProcessing.start(request);
 		}
-
 
 		private function _processingComplete(proxy:IRequestProxy):void {
-
+			trace('[ZRequests] _processingComplete()', proxy, ZParsing.getString(proxy.response));
 		}
 
-		private function _processingError(proxy:IRequestProxy, error:String) : void
-		{
-
+		private function _processingError(proxy:IRequestProxy, error:String):void {
+			trace('[ZRequests] _processingError()', proxy, error);
 		}
 
 		private function _getRequestProcessing(requestType:String, dataProcessing:IDataProcessing):IRequestProcessing {

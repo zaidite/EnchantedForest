@@ -12,7 +12,7 @@ package zUtils.net.server.processing.requests {
 	 */
 	public interface IRequestProcessing {
 
-		function start(proxy:IRequestProxy);
+		function start(proxy:IRequestProxy):void;
 		function clearData():void;
 
 	}

@@ -1,10 +1,16 @@
 package core.controllers {
 	import core.Core;
+	import core.GameFacade;
 	import core.GameNotifications;
 	import core.proxy.FlashVarsProxy;
+	import core.proxy.requests.FetchPlayerProxy;
 
 	import org.puremvc.as3.interfaces.INotification;
 	import org.puremvc.as3.patterns.command.SimpleCommand;
+
+	import zUtils.net.server.IRequestProxy;
+
+	import zUtils.net.server.ZRequests;
 
 	import zUtils.service.ZParsing;
 
@@ -24,22 +30,23 @@ package core.controllers {
 		}
 		//***********************************************************
 
-
 		override public function execute(notification:INotification):void {
 			super.execute(notification);
 
 			var note:String = notification.getName();
-			var body:Object = notification.getBody();
 
 			switch(note) {
 				case GameNotifications.STARTUP:
 					Core.flashVarsProxy.getFlashVars();
 					break;
 				case GameNotifications.GETTING_FLASH_VARS:
-					trace('[GetStartData] execute()', ZParsing.getString(body));
-
+					GameFacade.instance().initCore();
+					var fetchPlayer:IRequestProxy = ZRequests.manager().getProxy(FetchPlayerProxy.NAME);
+						ZRequests.manager().requestStart(fetchPlayer);
+					break;
 			}
-
 		}
+
+
 	} //end class
 }//end package

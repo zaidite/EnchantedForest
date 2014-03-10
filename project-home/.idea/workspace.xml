@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2675e09b-68d8-4c96-a599-a868fe1c4e0d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayerProxy.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sources/src/core/proxy/valueObjects/FlashVarsVO.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" afterPath="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/core/GameFacade.as" afterPath="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/core/GameNotifications.as" afterPath="$PROJECT_DIR$/../sources/src/core/GameNotifications.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" afterPath="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as" afterPath="$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EnchantedForest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,28 +88,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ZRequests.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as">
+      <file leaf-file-name="GameFacade.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="65" selection-start="2485" selection-end="2485" vertical-scroll-proportion="2.1212554" vertical-offset="383" max-vertical-offset="2970">
+            <state line="73" column="65" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0" vertical-offset="1137" max-vertical-offset="2134">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlLoaderProcessing.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
+      <file leaf-file-name="FetchPlayerProxy.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayerProxy.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="56" selection-start="3005" selection-end="3005" vertical-scroll-proportion="0.0" vertical-offset="1838" max-vertical-offset="2618">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetConnectionProcessing.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="71" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="770">
+            <state line="18" column="46" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="1408">
               <folding />
             </state>
           </provider>
@@ -104,7 +109,43 @@
       <file leaf-file-name="RequestProxy.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="97" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1166">
+            <state line="52" column="8" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1474">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRequestProxy.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="34" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlLoaderProcessing.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="0" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="2684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZRequests.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="40" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="3080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONProcessing.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="0" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.57894737" vertical-offset="858" max-vertical-offset="1716">
               <folding />
             </state>
           </provider>
@@ -134,24 +175,30 @@
         <option value="$PROJECT_DIR$/../sources/src/constannts/Notifications.as" />
         <option value="$PROJECT_DIR$/../sources/src/core/view/GameViews.as" />
         <option value="$PROJECT_DIR$/../sources/src/temp/ApplicationViews.as" />
-        <option value="$PROJECT_DIR$/../sources/src/Main.as" />
         <option value="$PROJECT_DIR$/../sources/src/core/Core.as" />
-        <option value="$PROJECT_DIR$/../sources/src/core/GameNotifications.as" />
-        <option value="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" />
-        <option value="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" />
-        <option value="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
-        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" />
-        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as" />
-        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMFProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/Main.as" />
+        <option value="$PROJECT_DIR$/../sources/src/constannts/FlashVars.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsVO.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayer.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayerPlayer.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/valueObjects/FlashVarsVO.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/GameNotifications.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayerProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as" />
+        <option value="$PROJECT_DIR$/../sources/src/core/GameFacade.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as" />
-        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" />
         <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as" />
-        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" />
+        <option value="$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as" />
       </list>
     </option>
   </component>
@@ -169,7 +216,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -355,6 +402,84 @@
               <option name="myItemId" value="project-home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnchantedForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnchantedForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnchantedForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -378,8 +503,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="JSMoveMembersDialog.RECENTS_KEY">
+      <recent name="core.proxy.FlashVarsVO" />
+    </key>
     <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
       <recent name="zUtils.net.server.processing.requests" />
       <recent name="zUtils.net.server.processing.data" />
@@ -393,12 +522,13 @@
       <recent name="$PROJECT_DIR$/../sources/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../sources/src/core/proxy/valueObjects" />
       <recent name="$PROJECT_DIR$/../sources/src/core" />
       <recent name="$PROJECT_DIR$/../sources/src" />
       <recent name="$PROJECT_DIR$/../sources/src/temp" />
     </key>
   </component>
-  <component name="RunManager" selected="Flash App.project-home">
+  <component name="RunManager" selected="Flash App.MailRu">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -610,7 +740,44 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="project-home" type="FlashRunConfigurationType" factoryName="Flash App">
+    <configuration default="false" name="MailRu" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="project-home" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="true" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="Browser" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="project-home" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://my.mail.ru/apps/704731" />
+      <option name="usbDebugPort" value="7936" />
+      <RunnerSettings RunnerId="FlexDebugRunner" />
+      <ConfigurationWrapper RunnerId="FlexDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="standelone" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="project-home" />
       <option name="IOSSimulatorSdkPath" value="" />
       <option name="adlOptions" value="" />
@@ -647,8 +814,9 @@
       <ConfigurationWrapper RunnerId="FlexDebugRunner" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Flash App.project-home" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Flash App.MailRu" />
+      <item index="1" class="java.lang.String" itemvalue="Flash App.standelone" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -685,7 +853,7 @@
       <workItem from="1393761357028" duration="4000" />
       <workItem from="1393761391052" duration="3000" />
       <workItem from="1393761402061" duration="4000" />
-      <workItem from="1393774739483" duration="12635000" />
+      <workItem from="1393774739483" duration="24763000" />
     </task>
     <task id="LOCAL-00004" summary="Game">
       <created>1393761333143</created>
@@ -701,7 +869,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25648000" />
+    <option name="totallyTimeSpent" value="37776000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -725,17 +893,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="814" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892185" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39892185" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -769,7 +937,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -797,30 +967,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="77" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/content/Content.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="-2.039943" vertical-offset="2002" max-vertical-offset="4818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="313" selection-end="313" vertical-scroll-proportion="0.43137255" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="9" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.71754634" vertical-offset="619" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
@@ -839,100 +988,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
+    <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="1694">
+        <state line="38" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1100">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/Main.as">
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/valueObjects/FlashVarsVO.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="38" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.62339514" vertical-offset="399" max-vertical-offset="1100">
+        <state line="15" column="45" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameNotifications.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="77" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="550">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/core/Core.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="503" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+        <state line="23" column="9" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="704">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as">
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/FlashVarsProxy.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="726">
+        <state line="34" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1430">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as">
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/controllers/GetStartData.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="520" selection-end="520" vertical-scroll-proportion="0.22286542" vertical-offset="264" max-vertical-offset="1452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="50" selection-start="501" selection-end="501" vertical-scroll-proportion="0.48672566" vertical-offset="88" max-vertical-offset="1628">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="499" selection-end="499" vertical-scroll-proportion="0.35103244" vertical-offset="180" max-vertical-offset="1606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="266" selection-end="281" vertical-scroll-proportion="0.38205498" vertical-offset="0" max-vertical-offset="691">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="343" selection-end="386" vertical-scroll-proportion="0.13725491" vertical-offset="232" max-vertical-offset="1144">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="369" selection-end="369" vertical-scroll-proportion="0.46218488" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="56" selection-start="3005" selection-end="3005" vertical-scroll-proportion="0.0" vertical-offset="1838" max-vertical-offset="2618">
+        <state line="44" column="53" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="662" max-vertical-offset="1254">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="71" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="770">
+        <state line="22" column="55" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/AMF3Processing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="36" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/XJSONProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="36" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="804" max-vertical-offset="1672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/YAMLProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="36" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.39652678" vertical-offset="650" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/IDataProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="17" selection-start="383" selection-end="383" vertical-scroll-proportion="0.4929972" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/IRequestProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="344" selection-end="344" vertical-scroll-proportion="0.43137255" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/GameFacade.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="65" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0" vertical-offset="1137" max-vertical-offset="2134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/core/proxy/requests/FetchPlayerProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="1408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/IRequestProxy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="34" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/RequestProxy.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="97" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1166">
+        <state line="52" column="8" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1474">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="2684">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/ZRequests.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="65" selection-start="2485" selection-end="2485" vertical-scroll-proportion="2.1212554" vertical-offset="383" max-vertical-offset="2970">
+        <state line="28" column="40" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="3080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sources/src/zUtils/net/server/processing/data/JSONProcessing.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.57894737" vertical-offset="858" max-vertical-offset="1716">
           <folding />
         </state>
       </provider>

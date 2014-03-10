@@ -13,7 +13,7 @@ package zUtils.net.server.processing.data {
 	 */
 	public class AMF3Processing implements IDataProcessing {
 
-		public static const TYPE : String = 'amf3';
+		public static const TYPE:String = 'amf3';
 
 		//*********************** CONSTRUCTOR ***********************
 		public function AMF3Processing() {
@@ -27,7 +27,9 @@ package zUtils.net.server.processing.data {
 			return bytes;
 		}
 
-		public function decode(bytes:ByteArray):Object {
+		public function decode(data:Object):Object {
+			var bytes:ByteArray = new ByteArray();
+			bytes.writeObject(data);
 			bytes.uncompress();
 			return bytes.readObject();
 		}

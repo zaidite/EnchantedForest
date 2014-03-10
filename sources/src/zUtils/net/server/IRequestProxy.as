@@ -17,6 +17,7 @@ package zUtils.net.server {
 		function get requestComplete():Function
 		function get requestError():Function
 		function get response():Object
+		function get name():String
 
 		function set dataFormat(value:String):void
 		function set requestType(value:String):void
