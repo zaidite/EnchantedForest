@@ -1,5 +1,5 @@
 package core {
-	import core.proxy.FlashVarsProxy;
+	import core.model.proxy.FlashVarsProxy;
 
 	import org.puremvc.as3.interfaces.IFacade;
 	import org.puremvc.as3.patterns.facade.Facade;

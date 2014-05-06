@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="project-office">
     <configurations>
-      <configuration name="project-office" pure-as="true" main-class="Main" output-file="project-office.swf" output-folder="$MODULE_DIR$/../sources/static">
+      <configuration name="project-office" pure-as="true" main-class="Game" output-file="project-office.swf" output-folder="$MODULE_DIR$/../sources/static">
         <dependencies target-player="11.1">
           <entries>
             <entry library-name="preloader" library-level="project">
@@ -17,7 +17,11 @@
           </entries>
           <sdk name="4.6" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="compiler.define" value="CONFIG::USERS&#9;false&#10;CONFIG::USER_ID_MM&#9;&quot;9b6254841e37a1b&quot;&#10;CONFIG::USER_ID_VK&#9;&quot;44e0fc9eeaf401b&quot;&#10;CONFIG::USER_ID_FB&#9;&quot;bfb863ac7fb3b91&quot;&#10;CONFIG::USER_ID_BACKDOOR&#9;&quot;a95920e99e3779b&quot;&#10;CONFIG::USER_ID_CUSTOMBRANCH&#9;&quot;2e637af609d251678b&quot;&#10;CONFIG::time&#9;''" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android />
         <packaging-ios />

@@ -1,4 +1,4 @@
-package core.proxy.valueObjects {
+package core.model.valueObjects {
 
 	/**
 	 * Date   :  08.03.14
@@ -10,6 +10,9 @@ package core.proxy.valueObjects {
 	 * class responsibility :
 	 */
 	public class FlashVarsVO {
+
+        public var flashVars : Object ;
+
 		public static const DATA_FORMAT:String = 'dataFormat';
 		public static const LOGIN_SERVER_URL:String = 'loginServerURL';
 		public static const PLAYER_ID:String = 'playerID';

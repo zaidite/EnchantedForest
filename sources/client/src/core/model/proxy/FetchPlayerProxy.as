@@ -1,6 +1,6 @@
-package core.proxy.requests {
+package core.model.proxy {
 	import core.Core;
-	import core.GameNotifications;
+	import constants.GameNotifications;
 
 	import zUtils.net.server.IRequestProxy;
 	import zUtils.net.server.RequestProxy;
