@@ -52,7 +52,9 @@ package core.controllers {
 //                    GameFacade.instance().initCore();
 //                    var fetchPlayer:IRequestProxy = ZRequests.manager().getProxy(FetchPlayerProxy.NAME);
 //                    ZRequests.manager().requestStart(fetchPlayer);
+                        //TODO Настроить клиент для работы в браузере
                         //TODO Синхронизация времени с сервером
+
                     break;
             }
         }
