@@ -65,6 +65,8 @@ package core.model.proxy {
             var strOptions:String = str.slice(startIndex, endIndex - 1);
             valueObject.jsOptions = JSON.parse(strOptions);
 
+
+
             _standaloneDataToFlashVars();
         }
 

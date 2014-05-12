@@ -4,7 +4,8 @@ package core {
     import core.controllers.GameDataController;
     import core.model.proxy.FlashVarsProxy;
     import core.model.proxy.StandaloneDataProxy;
-    import core.model.proxy.FetchPlayerProxy;
+    import core.model.proxy.requests.FetchPlayerProxy;
+    import core.model.proxy.requests.SynchronizationProxy;
     import core.model.valueObjects.FlashVarsVO;
     import core.view.GameViews;
 
@@ -12,6 +13,7 @@ package core {
     import org.puremvc.as3.patterns.facade.Facade;
 
     import zUtils.net.server.ZRequests;
+    import zUtils.net.server.processing.requests.UrlLoaderProcessing;
     import zUtils.net.server.processing.requests.UrlLoaderProcessing;
     import zUtils.service.ZParsing;
 
@@ -67,7 +69,11 @@ package core {
             sendNotification(GameNotifications.STARTUP, game);
         }
 
+        public function initRequests():void {
+        	ZRequests.manager().init(UrlLoaderProcessing.TYPE, Core.flashVarsProxy.dataFormat);
 
+            ZRequests.manager().registerProxy(new SynchronizationProxy(Core.flashVarsProxy.timeServerURL + "/sync"));
+        }
 
         public static function instance():GameFacade {
             if (_instance == null) {

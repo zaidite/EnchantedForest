@@ -20,10 +20,12 @@ package core.model.proxy {
 
         public function get valueObject():FlashVarsVO {return data as FlashVarsVO;}
 
-		public function get dataFormat():String { return valueObject[FlashVarsVO.DATA_FORMAT];}
-		public function get serverUrl():String { return valueObject[FlashVarsVO.LOGIN_SERVER_URL];}
-		public function get playerID():String {return valueObject[FlashVarsVO.PLAYER_ID];}
-		public function get sid():String {return valueObject[FlashVarsVO.SID];}
+		public function get dataFormat():String { return valueObject.flashVars[FlashVarsVO.DATA_FORMAT];}
+		public function get loginServerUrl():String { return valueObject.flashVars[FlashVarsVO.LOGIN_SERVER_URL];}
+		public function get timeServerURL():String { return valueObject.flashVars[FlashVarsVO.TIME_SERVER_URL];}
+		public function get gameServerURL():String { return valueObject.flashVars[FlashVarsVO.GAME_SERVER_URL];}
+		public function get playerID():String {return valueObject.flashVars[FlashVarsVO.PLAYER_ID];}
+		public function get sid():String {return valueObject.flashVars[FlashVarsVO.SID];}
 
 		public static const NAME:String = 'FlashVarsProxy';
 
