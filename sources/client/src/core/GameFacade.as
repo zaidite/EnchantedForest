@@ -57,12 +57,13 @@ package core {
         override protected function initializeView():void {
             super.initializeView();
             _gameViews = new GameViews();
-            _main.addChild(_gameViews);
         }
 
         //init 4
         public function startup(game:Game):void {
             _main = game;
+            _main.addChild(_gameViews);
+
             sendNotification(GameNotifications.STARTUP, game);
         }
 

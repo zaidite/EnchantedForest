@@ -40,7 +40,7 @@ package core.controllers {
             switch (note) {
                 case GameNotifications.STARTUP:
                     var game:Game = notification.getBody() as Game;
-                    Core.flashVarsProxy.validateFlashVars(game.loaderInfo.parameters);
+                    Core.flashVarsProxy.validateFlashVars(game.stage.loaderInfo.parameters);
                     break;
 
                 case GameNotifications.NEED_STANDALONE_DATA:
@@ -52,7 +52,6 @@ package core.controllers {
 //                    GameFacade.instance().initCore();
 //                    var fetchPlayer:IRequestProxy = ZRequests.manager().getProxy(FetchPlayerProxy.NAME);
 //                    ZRequests.manager().requestStart(fetchPlayer);
-                        //TODO Настроить клиент для работы в браузере
                         //TODO Синхронизация времени с сервером
 
                     break;

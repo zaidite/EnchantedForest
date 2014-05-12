@@ -267,9 +267,6 @@ package
             {
                 app = new mainClass();
                 app.visible = false;
-//                app.flashVars = loaderInfo.parameters;
-                app.loaderInfo.parameters = loaderInfo.parameters;
-
                 stage.addChildAt(app as DisplayObject, 0);
             }
         }
