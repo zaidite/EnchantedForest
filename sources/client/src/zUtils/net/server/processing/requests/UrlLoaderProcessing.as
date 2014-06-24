@@ -1,18 +1,16 @@
 package zUtils.net.server.processing.requests {
-	import flash.display.Loader;
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.events.SecurityErrorEvent;
-	import flash.net.URLLoader;
-	import flash.net.URLLoaderDataFormat;
-	import flash.net.URLRequest;
-	import flash.net.URLRequestMethod;
-	import flash.system.LoaderContext;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.events.SecurityErrorEvent;
+    import flash.net.URLLoader;
+    import flash.net.URLLoaderDataFormat;
+    import flash.net.URLRequest;
+    import flash.net.URLRequestMethod;
 
-	import zUtils.net.server.IRequestProxy;
-	import zUtils.net.server.processing.data.IDataProcessing;
+    import zUtils.net.server.IRequestProxy;
+    import zUtils.net.server.processing.data.IDataProcessing;
 
-	/**
+    /**
 	 * Date   :  02.03.14
 	 * Time   :  19:40
 	 * author :  Vitaliy Snitko
@@ -26,7 +24,7 @@ package zUtils.net.server.processing.requests {
 		private var _request:URLRequest;
 		private var _method:String;
 		private var _loader:URLLoader;
-		private var _currentProxy:IRequestProxy;
+		private var _currentRequest:IRequestProxy;
 		private var _dataFormat:String;
 		private var _dataProcessing:IDataProcessing;
 		private var _processingComplete:Function;
@@ -45,13 +43,14 @@ package zUtils.net.server.processing.requests {
 		//***********************************************************
 
 		public function start(proxy:IRequestProxy):void {
-			_currentProxy = proxy;
+			_currentRequest = proxy;
+            _currentRequest.response = null;
 
 			var request:URLRequest = _getRequest();
-			request.url = _currentProxy.url;
+			request.url = _currentRequest.url;
 
-			if(_currentProxy.params) {
-				request.data = _dataProcessing.decode(_currentProxy.params);
+			if(_currentRequest.params) {
+				request.data = _dataProcessing.encode(_currentRequest.params);
 			}
 
 			var loader:URLLoader = _getLoader();
@@ -63,6 +62,7 @@ package zUtils.net.server.processing.requests {
 
 
 		public function clearData():void {
+            //TODO realization
 		}
 
 		private function _getRequest():URLRequest {
@@ -86,30 +86,37 @@ package zUtils.net.server.processing.requests {
 
 
 		private function _onSecurityError(event:SecurityErrorEvent):void {
-			trace('[UrlLoaderProcessing] _onSecurityError()', arguments);
+
+            //TODO add Logging
 
 			if(_processingError != null) {
-				_processingError(_currentProxy, event.toString());
+				_processingError(_currentRequest, event.toString());
 			}
-			_currentProxy = null;
+			_currentRequest = null;
 		}
 		private function _onLoadFail(event:IOErrorEvent):void {
-			trace('[UrlLoaderProcessing] _onLoadFail()', arguments);
+
+            //TODO add Logging
+
+            _currentRequest.requestError();
+            _currentRequest.onError();
 
 			if(_processingError != null) {
-				_processingError(_currentProxy, event.toString());
+				_processingError(_currentRequest, event.toString());
 			}
-			_currentProxy = null;
+			_currentRequest = null;
 		}
 		private function _onLoadComplete(event:Event):void {
-			//декодирование данных ответа
 
-			trace('[UrlLoaderProcessing] _onLoadComplete()', arguments);
+            //TODO add Logging
+
+            _currentRequest.response = _dataProcessing.decode(event.target.data);
+            _currentRequest.onComplete();
 
 			if(_processingComplete != null) {
-				_processingComplete(_currentProxy);
+				_processingComplete(_currentRequest);
 			}
-			_currentProxy = null;
+			_currentRequest = null;
 
 		}
 

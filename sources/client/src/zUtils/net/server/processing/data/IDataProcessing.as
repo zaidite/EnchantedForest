@@ -14,7 +14,7 @@ package zUtils.net.server.processing.data {
 
 		function encode(data:Object):ByteArray;
 		function encodeString(data:Object):String;
-		function decode(data:Object):Object;
+		function decode(data:ByteArray):Object;
 		function decodeString(string:String):Object;
 
 	}

@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="project-office">
     <configurations>
-      <configuration name="project-office" pure-as="true" main-class="Game" output-file="project-office.swf" output-folder="$MODULE_DIR$/../sources/static">
+      <configuration name="project-office" pure-as="true" main-class="Game" output-file="game.swf" output-folder="$MODULE_DIR$/../sources/static">
         <dependencies target-player="11.1">
           <entries>
             <entry library-name="preloader" library-level="project">

@@ -15,6 +15,8 @@ package core.model.valueObjects {
 
 		public static const DATA_FORMAT:String = 'dataFormat';
 		public static const LOGIN_SERVER_URL:String = 'loginServerURL';
+		public static const TIME_SERVER_URL:String = 'timeServerURL';
+		public static const GAME_SERVER_URL:String = 'gameServerURL';
 		public static const PLAYER_ID:String = 'playerID';
 		public static const SID:String = 'sid';
 

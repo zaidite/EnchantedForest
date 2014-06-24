@@ -50,8 +50,6 @@ package zUtils.net.server {
 
 			}
 
-			trace('[ZRequests] init()', arguments);
-
 			_defaultRequestType = requestType;
 			_defaultDataFormat = dataFormat;
 
@@ -75,11 +73,11 @@ package zUtils.net.server {
 		}
 
 		private function _processingComplete(proxy:IRequestProxy):void {
-			trace('[ZRequests] _processingComplete()', proxy, ZParsing.getString(proxy.response));
+            //кoллбеки для организации стека запросов.
 		}
 
 		private function _processingError(proxy:IRequestProxy, error:String):void {
-			trace('[ZRequests] _processingError()', proxy, error);
+            //кoллбеки для организации стека запросов.
 		}
 
 		private function _getRequestProcessing(requestType:String, dataProcessing:IDataProcessing):IRequestProcessing {
