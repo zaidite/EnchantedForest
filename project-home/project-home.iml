@@ -20,6 +20,9 @@
             <entry library-name="PureMVC_AS3_2_0_4" library-level="project">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-name="preloader" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
           <sdk name="Apache 4.11" />
         </dependencies>
@@ -48,6 +51,7 @@
     <orderEntry type="library" exported="" name="EazeTween-rc2" level="project" />
     <orderEntry type="library" exported="" name="MonsterDebugger" level="project" />
     <orderEntry type="library" exported="" name="PureMVC_AS3_2_0_4" level="project" />
+    <orderEntry type="library" exported="" name="preloader" level="project" />
   </component>
 </module>
 

@@ -28,7 +28,6 @@ package core {
      */
     public class GameFacade extends Facade implements IFacade {
 
-        private var _main:Game;
         private var _gameViews:GameViews;
 
         private static var _instance:GameFacade;
@@ -59,14 +58,12 @@ package core {
         override protected function initializeView():void {
             super.initializeView();
             _gameViews = new GameViews();
+			Game.instance.addChild(_gameViews);
         }
 
         //init 4
-        public function startup(game:Game):void {
-            _main = game;
-            _main.addChild(_gameViews);
-
-            sendNotification(GameNotifications.STARTUP, game);
+        public function startup():void {
+            sendNotification(GameNotifications.STARTUP, Game.instance);
         }
 
         public function initRequests():void {
