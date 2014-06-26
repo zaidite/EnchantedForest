@@ -1,5 +1,7 @@
 package core.model.proxy {
     import core.Core;
+    import core.GameFacade;
+    import core.model.proxy.requests.SynchronizationProxy;
     import core.model.valueObjects.StandaloneDataVO;
 
     import flash.events.Event;
@@ -14,6 +16,11 @@ package core.model.proxy {
 
     import settings.GameSettings;
 
+    import utils.Median;
+
+    import zUtils.net.server.IRequestProxy;
+    import zUtils.net.server.ZRequests;
+
     /**
      * Date   : 06.05.2014
      * Time   : 15:20
@@ -26,6 +33,10 @@ package core.model.proxy {
     public class StandaloneDataProxy extends Proxy implements IProxy {
 
         public function get valueObject():StandaloneDataVO {return data as StandaloneDataVO;}
+
+        private var _requestTime:Number;
+
+        private static const DELTA_THRESHOLD:Number = 1000;
 
         public static const NAME:String = 'StandaloneDataProxy';
 
@@ -65,17 +76,61 @@ package core.model.proxy {
             var strOptions:String = str.slice(startIndex, endIndex - 1);
             valueObject.jsOptions = JSON.parse(strOptions);
 
-
-
-            _standaloneDataToFlashVars();
+            _initRequests();
+            _getDeltaTime();
         }
 
-        private function _standaloneDataToFlashVars():void {
+        private function _initRequests():void {
+            var defaultDataFormat:String = valueObject.jsOptions.settings['DATA_FORMAT'];
+            var syncServerURL:String = valueObject.jsOptions.servers['timesync_server'];
+            GameFacade.instance().initRequests(defaultDataFormat, syncServerURL);
+        }
+
+        private function _getDeltaTime():void {
+            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
+            _requestTime = getTimer();
+            syncProxy.params = {'time': _requestTime };
+            syncProxy.requestComplete = _formFlashVars;
+            ZRequests.manager().requestStart(syncProxy);
+        }
+
+        private function _formFlashVars():void {
+            var delta:Number = _calculationDeltaTime();
+            var flashVars:Object = _standaloneDataToFlashVars(delta);
+            Core.flashVarsProxy.validateFlashVars(flashVars);
+        }
+
+        private function _calculationDeltaTime():Number {
+
+            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
+
+            var responseTime:Number = getTimer();
+            var serverTime:Number = syncProxy.response['time'];
+            var duration:Number = responseTime - _requestTime;
+            var currentDelta:Number = serverTime - _requestTime - duration / 2;
+
+            var delta:Number;
+            var deltaMedian:Median =  new Median();
+
+            if (Math.abs(currentDelta - delta) > DELTA_THRESHOLD) {
+                deltaMedian.reset();
+                deltaMedian.add(currentDelta);
+                delta = currentDelta;
+            }
+            else {
+                deltaMedian.add(currentDelta);
+                delta = deltaMedian.median;
+            }
+
+            return delta
+        }
+
+        private function _standaloneDataToFlashVars(delta:Number):Object {
 
             var str:String = "sid=" + valueObject.jsOptions.player.sid
                     + "&appURL=http://my.mail.ru/apps/618399"
                     + "&playerID=" + GameSettings.uid
-                    + "&delta=" + 0//_delta
+                    + "&delta=" + delta
                     + "&applicationTime=" + getTimer().toFixed(0)
                     + "&rootLocation=./"
                     + "&loginServerURL=" + valueObject.jsOptions.servers.login_server
@@ -107,7 +162,7 @@ package core.model.proxy {
                     + '&initial_payment_enabled=true';
 
             var flashVars:Object = new URLVariables(str);
-            Core.flashVarsProxy.validateFlashVars(flashVars);
+            return flashVars;
         }
 
     } //end class

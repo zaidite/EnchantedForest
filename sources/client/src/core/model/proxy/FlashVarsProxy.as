@@ -14,7 +14,7 @@ package core.model.proxy {
 	 * mail   :  zaidite@gmail.com
 	 *
 	 * class description    :
-	 * class responsibility :
+	 * class responsibility : принимает и хранит флешварсы
 	 */
 	public class FlashVarsProxy extends Proxy implements IProxy {
 

@@ -63,13 +63,14 @@ package core {
 
         //init 4
         public function startup():void {
+            Core.gameFacade = this;
             sendNotification(GameNotifications.STARTUP, Game.instance);
         }
 
-        public function initRequests():void {
-        	ZRequests.manager().init(UrlLoaderProcessing.TYPE, Core.flashVarsProxy.dataFormat);
+        public function initRequests(dataFormat:String, timeServerUrl:String):void {
+        	ZRequests.manager().init(UrlLoaderProcessing.TYPE, dataFormat);
 
-            ZRequests.manager().registerProxy(new SynchronizationProxy(Core.flashVarsProxy.timeServerURL + "/sync"));
+            ZRequests.manager().registerProxy(new SynchronizationProxy(timeServerUrl + "/sync"));
         }
 
         public static function instance():GameFacade {

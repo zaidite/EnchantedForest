@@ -58,13 +58,14 @@ package zUtils.net.server {
         //***********************************************************
 
         public function onComplete():void {
-            if (_requestComplete != null) {
-                _requestComplete();
-            }
             if (_response) {
                 trace('[RequestProxy] :', 'onComplete();  ', name, ZParsing.getString(_response));
             } else {
                 trace('[RequestProxy] :', '_onComplete(); response is NULL. ', name);
+            }
+
+            if (_requestComplete != null) {
+                _requestComplete();
             }
 
         }

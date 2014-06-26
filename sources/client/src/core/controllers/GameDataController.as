@@ -54,18 +54,14 @@ package core.controllers {
                     break;
 
                 case GameNotifications.GETTING_FLASH_VARS:
-                    GameFacade.instance().initRequests();
-                    var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
-                    syncProxy.params = {'time': getTimer()};
-                    syncProxy.requestComplete = _syncComplete;
-                    ZRequests.manager().requestStart(syncProxy);
+                    Core.gameFacade.initRequests(Core.flashVarsProxy.dataFormat, Core.flashVarsProxy.timeServerURL);
+
+                    trace('[GameDataController] :', 'execute();  ', GameNotifications.GETTING_FLASH_VARS);
+
+                    //TODO все данные для запроса к серверу имеются.
+                    //возможно можно делать запрос fetch_pleer
                     break;
             }
-        }
-
-        private function _syncComplete():void {
-            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
-            trace('[GameDataController] :', '_syncComplete();  ', ZParsing.getString(syncProxy.response));
         }
 
     } //end class
