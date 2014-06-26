@@ -20,6 +20,9 @@ package {
     [SWF(pageTitle="Main", width="760", height="670", widthPercent="100", heightPercent="100", frameRate="120", backgroundColor="#209803")]
     public class Game extends Sprite {
 
+		public static var instance : Game ;
+
+
         //*********************** CONSTRUCTOR ***********************
         public function Game() {
 
@@ -36,13 +39,15 @@ package {
             if (!stage || !stage.stageWidth || !stage.stageHeight)return;
             removeEventListener(Event.ENTER_FRAME, _initData);
 
+			instance = this;
+
             Security.allowDomain('*');
             Security.allowInsecureDomain('*');
 
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.align = StageAlign.TOP_LEFT;
 
-            GameFacade.instance().startup(this);
+            GameFacade.instance().startup();
 
         }
 

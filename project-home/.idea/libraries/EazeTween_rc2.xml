@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="EazeTween-rc2" type="flex">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../sources/libs/EazeTween-rc2.swc!/" />
+      <root url="jar://$PROJECT_DIR$/../sources/client/libs/tools/EazeTween-rc2.swc!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
