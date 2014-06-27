@@ -27,14 +27,17 @@ package core.model.proxy {
      * author : Vitaliy Snitko
      * mail   : zaidite@gmail.com
      *
-     * description    :
+     * description    : При загрузке клиента в standAlone режиме получает и формирует данные эмулирующие флешварсы при загрузке в браузере.
      * responsibility :
      */
     public class StandaloneDataProxy extends Proxy implements IProxy {
 
-        public function get valueObject():StandaloneDataVO {return data as StandaloneDataVO;}
-
         private var _requestTime:Number;
+
+        private function get _valueObject():StandaloneDataVO {return data as StandaloneDataVO;}
+
+        public function get serverTimeSync():String {return _valueObject.jsOptions ? _valueObject.jsOptions.servers[StandaloneDataVO.TIME_SYNC_SERVER] : null}
+        public function get requestDataFormat():String {return _valueObject.jsOptions ? _valueObject.jsOptions.settings[StandaloneDataVO.DATA_FORMAT] : null}
 
         private static const DELTA_THRESHOLD:Number = 1000;
 
@@ -74,15 +77,15 @@ package core.model.proxy {
             var endIndex:int = str.indexOf("\n", startIndex);
 
             var strOptions:String = str.slice(startIndex, endIndex - 1);
-            valueObject.jsOptions = JSON.parse(strOptions);
+            _valueObject.jsOptions = JSON.parse(strOptions);
 
             _initRequests();
             _getDeltaTime();
         }
 
         private function _initRequests():void {
-            var defaultDataFormat:String = valueObject.jsOptions.settings['DATA_FORMAT'];
-            var syncServerURL:String = valueObject.jsOptions.servers['timesync_server'];
+            var defaultDataFormat:String = requestDataFormat;
+            var syncServerURL:String = serverTimeSync;
             GameFacade.instance().initRequests(defaultDataFormat, syncServerURL);
         }
 
@@ -110,7 +113,7 @@ package core.model.proxy {
             var currentDelta:Number = serverTime - _requestTime - duration / 2;
 
             var delta:Number;
-            var deltaMedian:Median =  new Median();
+            var deltaMedian:Median = new Median();
 
             if (Math.abs(currentDelta - delta) > DELTA_THRESHOLD) {
                 deltaMedian.reset();
@@ -127,23 +130,23 @@ package core.model.proxy {
 
         private function _standaloneDataToFlashVars(delta:Number):Object {
 
-            var str:String = "sid=" + valueObject.jsOptions.player.sid
+            var str:String = "sid=" + _valueObject.jsOptions.player.sid
                     + "&appURL=http://my.mail.ru/apps/618399"
                     + "&playerID=" + GameSettings.uid
                     + "&delta=" + delta
                     + "&applicationTime=" + getTimer().toFixed(0)
                     + "&rootLocation=./"
-                    + "&loginServerURL=" + valueObject.jsOptions.servers.login_server
-                    + "&gameServerURL=" + valueObject.jsOptions.servers.game_server
-                    + "&timeServerURL=" + valueObject.jsOptions.servers.timesync_server
-                    + "&frontendURL=" + valueObject.jsOptions.servers.game_server
+                    + "&loginServerURL=" + _valueObject.jsOptions.servers.login_server
+                    + "&gameServerURL=" + _valueObject.jsOptions.servers.game_server
+                    + "&timeServerURL=" + _valueObject.jsOptions.servers.timesync_server
+                    + "&frontendURL=" + _valueObject.jsOptions.servers.game_server
                     + "&locale=ru"
                     + "&dataFormat=json"
                     + "&platform=mail.ru"
                     + "&developmentMode=true"
                     + "&backgroundColor=0"
-                    + "&ingamelog=" + valueObject.jsOptions.flash_settings.ingamelog
-                    + "&enable_friends=" + valueObject.jsOptions.flash_settings.enable_friends
+                    + "&ingamelog=" + _valueObject.jsOptions.flash_settings.ingamelog
+                    + "&enable_friends=" + _valueObject.jsOptions.flash_settings.enable_friends
                     + "&coins_asset=res_coins"
                     + "&reals_asset=res_crystals"
                     + "&default_friend_clicks=5"
@@ -158,7 +161,7 @@ package core.model.proxy {
                     + "&daily_quests_timeout=86400000"
                     + "&tutorial=3"
                     + "&enable_quest_buy_button=true"
-                    + '&friend_restore_hour=' + valueObject.jsOptions.flash_settings.friend_restore_hour
+                    + '&friend_restore_hour=' + _valueObject.jsOptions.flash_settings.friend_restore_hour
                     + '&initial_payment_enabled=true';
 
             var flashVars:Object = new URLVariables(str);

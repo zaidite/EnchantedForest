@@ -14,18 +14,18 @@ package core.model.proxy {
 	 * mail   :  zaidite@gmail.com
 	 *
 	 * class description    :
-	 * class responsibility : принимает и хранит флешварсы
+	 * class responsibility : принимает, валидирует и хранит флешварсы
 	 */
 	public class FlashVarsProxy extends Proxy implements IProxy {
 
-        public function get valueObject():FlashVarsVO {return data as FlashVarsVO;}
+        private function get _valueObject():FlashVarsVO {return data as FlashVarsVO;}
 
-		public function get dataFormat():String { return valueObject.flashVars[FlashVarsVO.DATA_FORMAT];}
-		public function get loginServerUrl():String { return valueObject.flashVars[FlashVarsVO.LOGIN_SERVER_URL];}
-		public function get timeServerURL():String { return valueObject.flashVars[FlashVarsVO.TIME_SERVER_URL];}
-		public function get gameServerURL():String { return valueObject.flashVars[FlashVarsVO.GAME_SERVER_URL];}
-		public function get playerID():String {return valueObject.flashVars[FlashVarsVO.PLAYER_ID];}
-		public function get sid():String {return valueObject.flashVars[FlashVarsVO.SID];}
+		public function get dataFormat():String { return _valueObject.flashVars[FlashVarsVO.DATA_FORMAT];}
+		public function get loginServerUrl():String { return _valueObject.flashVars[FlashVarsVO.LOGIN_SERVER_URL];}
+		public function get timeServerURL():String { return _valueObject.flashVars[FlashVarsVO.TIME_SERVER_URL];}
+		public function get gameServerURL():String { return _valueObject.flashVars[FlashVarsVO.GAME_SERVER_URL];}
+		public function get playerID():String {return _valueObject.flashVars[FlashVarsVO.PLAYER_ID];}
+		public function get sid():String {return _valueObject.flashVars[FlashVarsVO.SID];}
 
 		public static const NAME:String = 'FlashVarsProxy';
 
@@ -47,8 +47,8 @@ package core.model.proxy {
                 sendNotification(GameNotifications.NEED_STANDALONE_DATA);
             }
             else{
-                valueObject.flashVars = flashVars;
-                sendNotification(GameNotifications.GETTING_FLASH_VARS, valueObject.flashVars);
+                _valueObject.flashVars = flashVars;
+                sendNotification(GameNotifications.GETTING_FLASH_VARS, _valueObject.flashVars);
             }
 		}
 
