@@ -24,7 +24,7 @@ package zUtils.net.server.processing.requests {
 		private var _request:URLRequest;
 		private var _method:String;
 		private var _loader:URLLoader;
-		private var _currentRequest:IRequestProxy;
+		private var _currentProxy:IRequestProxy;
 		private var _dataFormat:String;
 		private var _dataProcessing:IDataProcessing;
 		private var _processingComplete:Function;
@@ -43,14 +43,14 @@ package zUtils.net.server.processing.requests {
 		//***********************************************************
 
 		public function start(proxy:IRequestProxy):void {
-			_currentRequest = proxy;
-            _currentRequest.response = null;
+			_currentProxy = proxy;
+            _currentProxy.response = null;
 
 			var request:URLRequest = _getRequest();
-			request.url = _currentRequest.url;
+			request.url = _currentProxy.url;
 
-			if(_currentRequest.params) {
-				request.data = _dataProcessing.encode(_currentRequest.params);
+			if(_currentProxy.params) {
+				request.data = _dataProcessing.encode(_currentProxy.params);
 			}
 
 			var loader:URLLoader = _getLoader();
@@ -90,33 +90,33 @@ package zUtils.net.server.processing.requests {
             //TODO add Logging
 
 			if(_processingError != null) {
-				_processingError(_currentRequest, event.toString());
+				_processingError(_currentProxy, event.toString());
 			}
-			_currentRequest = null;
+			_currentProxy = null;
 		}
 		private function _onLoadFail(event:IOErrorEvent):void {
 
             //TODO add Logging
 
-            _currentRequest.requestError();
-            _currentRequest.onError();
+            _currentProxy.requestError();
+            _currentProxy.onError();
 
 			if(_processingError != null) {
-				_processingError(_currentRequest, event.toString());
+				_processingError(_currentProxy, event.toString());
 			}
-			_currentRequest = null;
+			_currentProxy = null;
 		}
 		private function _onLoadComplete(event:Event):void {
 
             //TODO add Logging
 
-            _currentRequest.response = _dataProcessing.decode(event.target.data);
-            _currentRequest.onComplete();
+            _currentProxy.response = _dataProcessing.decode(event.target.data);
+            _currentProxy.onComplete();
 
 			if(_processingComplete != null) {
-				_processingComplete(_currentRequest);
+				_processingComplete(_currentProxy);
 			}
-			_currentRequest = null;
+			_currentProxy = null;
 
 		}
 

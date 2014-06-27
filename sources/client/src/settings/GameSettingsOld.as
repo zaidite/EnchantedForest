@@ -12,7 +12,7 @@ package settings {
      * description    :
      * responsibility :
      */
-    public class GameSettings {
+    public class GameSettingsOld {
 
         //-----------------------------
         // Backend URL

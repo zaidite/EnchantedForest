@@ -11,12 +11,12 @@ package core.model.proxy.requests {
      * description    :
      * responsibility :
      */
-    public class SynchronizationProxy extends RequestProxy implements IRequestProxy {
+    public class SynchronizationRequest extends RequestProxy implements IRequestProxy {
 
         public static const NAME : String = 'Synchronization';
 
         //*********************** CONSTRUCTOR ***********************
-        public function SynchronizationProxy(url:String) {
+        public function SynchronizationRequest(url:String) {
             super(NAME, url);
         }
         //***********************************************************

@@ -1,7 +1,7 @@
 package core.model.proxy {
     import core.Core;
     import core.GameFacade;
-    import core.model.proxy.requests.SynchronizationProxy;
+    import core.model.proxy.requests.SynchronizationRequest;
     import core.model.valueObjects.StandaloneDataVO;
 
     import flash.events.Event;
@@ -14,7 +14,7 @@ package core.model.proxy {
     import org.puremvc.as3.interfaces.IProxy;
     import org.puremvc.as3.patterns.proxy.Proxy;
 
-    import settings.GameSettings;
+    import settings.GameSettingsOld;
 
     import utils.Median;
 
@@ -51,7 +51,7 @@ package core.model.proxy {
         //***********************************************************
 
         public function geStandaloneData():void {
-            var request:URLRequest = new URLRequest(GameSettings.backendURL + '/play?user_id=' + GameSettings.uid);
+            var request:URLRequest = new URLRequest(GameSettingsOld.backendURL + '/play?user_id=' + GameSettingsOld.uid);
             var loader:URLLoader = new URLLoader();
             loader.addEventListener(Event.COMPLETE, _loaderCompleteHandler);
             loader.addEventListener(IOErrorEvent.IO_ERROR, _loaderIoErrorHandler);
@@ -90,7 +90,7 @@ package core.model.proxy {
         }
 
         private function _getDeltaTime():void {
-            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
+            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationRequest.NAME);
             _requestTime = getTimer();
             syncProxy.params = {'time': _requestTime };
             syncProxy.requestComplete = _formFlashVars;
@@ -105,7 +105,7 @@ package core.model.proxy {
 
         private function _calculationDeltaTime():Number {
 
-            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationProxy.NAME);
+            var syncProxy:IRequestProxy = ZRequests.manager().getProxy(SynchronizationRequest.NAME);
 
             var responseTime:Number = getTimer();
             var serverTime:Number = syncProxy.response['time'];
@@ -132,7 +132,7 @@ package core.model.proxy {
 
             var str:String = "sid=" + _valueObject.jsOptions.player.sid
                     + "&appURL=http://my.mail.ru/apps/618399"
-                    + "&playerID=" + GameSettings.uid
+                    + "&playerID=" + GameSettingsOld.uid
                     + "&delta=" + delta
                     + "&applicationTime=" + getTimer().toFixed(0)
                     + "&rootLocation=./"

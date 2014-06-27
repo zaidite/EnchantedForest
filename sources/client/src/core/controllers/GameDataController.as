@@ -7,7 +7,7 @@ package core.controllers {
     import core.model.proxy.FlashVarsProxy;
     import core.model.proxy.requests.FetchPlayerProxy;
     import core.model.proxy.StandaloneDataProxy;
-    import core.model.proxy.requests.SynchronizationProxy;
+    import core.model.proxy.requests.SynchronizationRequest;
 
     import flash.utils.getTimer;
 
