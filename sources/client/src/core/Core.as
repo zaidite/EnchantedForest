@@ -1,5 +1,6 @@
 package core {
     import core.model.proxy.FlashVarsProxy;
+    import core.model.proxy.GameDataProxy;
 
     import org.puremvc.as3.interfaces.IFacade;
     import org.puremvc.as3.patterns.facade.Facade;
@@ -22,6 +23,8 @@ package core {
         public static function get flashVarsProxy():FlashVarsProxy {return facade.retrieveProxy(FlashVarsProxy.NAME) as FlashVarsProxy;}
 
         public static function get gameFacade():GameFacade {return _gameFacade;}
+
+        public static function get gameDataProxy():GameDataProxy {return facade.retrieveProxy(GameDataProxy.NAME) as GameDataProxy;}
 
         public static function set gameFacade(gameFacade:GameFacade):void {
             if (!_gameFacade) {

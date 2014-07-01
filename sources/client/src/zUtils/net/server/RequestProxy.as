@@ -1,4 +1,5 @@
 package zUtils.net.server {
+    import zUtils.service.ZLogger;
     import zUtils.service.ZParsing;
 
     /**
@@ -58,11 +59,8 @@ package zUtils.net.server {
         //***********************************************************
 
         public function onComplete():void {
-            if (_response) {
-                trace('[RequestProxy] :', 'onComplete();  ', name, ZParsing.getString(_response));
-            } else {
-                trace('[RequestProxy] :', '_onComplete(); response is NULL. ', name);
-            }
+
+            _showInLog(_response);
 
             if (_requestComplete != null) {
                 _requestComplete();
@@ -74,7 +72,7 @@ package zUtils.net.server {
             if (_requestError != null) {
                 _requestError();
             }
-            trace('[RequestProxy] :', 'onError();  ');
+            ZLogger.info('[RequestProxy] :', 'onError();  ');
         }
 
         public function clearData():void {
@@ -86,6 +84,19 @@ package zUtils.net.server {
             _requestError = null;
             _name = null;
             _response = null;
+        }
+
+        private function _showInLog(data:Object):void {
+            if (!ZRequests.manager().showResponseInLog) {
+                return;
+            }
+
+            if (data) {
+                ZLogger.info('[RequestProxy] :', 'onComplete();  ', name, ZParsing.getString(data));
+            } else {
+                ZLogger.info('[RequestProxy] :', '_onComplete(); response is NULL. ', name);
+            }
+
         }
 
     } //end class

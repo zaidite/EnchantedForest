@@ -1,4 +1,6 @@
 package core.model.proxy.requests {
+    import core.Core;
+
     import zUtils.net.server.IRequestProxy;
     import zUtils.net.server.RequestProxy;
 
@@ -13,20 +15,24 @@ package core.model.proxy.requests {
      */
     public class GameDataRequest extends RequestProxy implements IRequestProxy {
 
-        public static const NAME : String = 'GameDataRequest';
+        public static const NAME:String = 'GameDataRequest';
+        public static const PATH : String = '/static/data/';
+        public static const DATA_NAME : String = 'data.';
+
 
         //*********************** CONSTRUCTOR ***********************
         public function GameDataRequest() {
             super(NAME, url);
-            _init();
         }
 
         //***********************************************************
 
-        private function _init():void {
+        public function initRequestData():void {
 
+            var gameDataURL:String = Core.flashVarsProxy.loginServerUrl;
+            var path:String = PATH + DATA_NAME + Core.flashVarsProxy.localisation;
 
-
+            _url = gameDataURL + path;
         }
 
     } //end class

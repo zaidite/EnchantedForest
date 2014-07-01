@@ -7,6 +7,8 @@ package {
     import flash.events.Event;
     import flash.system.Security;
 
+    import zUtils.service.ZLogger;
+
     /**
      * Date   :  01.03.14
      * Time   :  23:03
@@ -47,23 +49,10 @@ package {
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.align = StageAlign.TOP_LEFT;
 
+            ZLogger.init();
             GameFacade.instance().startup();
 
         }
-
-
-        private function _sync():void {
-           /* _requestTime = getTimer();
-            var url:String = timesync_server + "/sync";
-            var format:String = dataFormat;
-            var params:Object = {'time': _requestTime};*/
-
-//            var syncRequest:DataRequest = DataRequest.init(timesync_server + "/sync", dataFormat);
-//            syncRequest.doneCallbackRegister(_syncCallback, true);
-//            syncRequest.start({'time': _requestTime});
-        }
-
-
 
     } //end class
 }//end package

@@ -14,6 +14,12 @@
             <entry library-name="bulk_loader" library-level="project">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-name="Console2.6+asdoc" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="MonsterDebugger" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
           <sdk name="4.6" />
         </dependencies>
@@ -39,6 +45,8 @@
     <orderEntry type="library" exported="" name="preloader" level="project" />
     <orderEntry type="library" exported="" name="PureMVC_AS3_2_0_4" level="project" />
     <orderEntry type="library" exported="" name="bulk_loader" level="project" />
+    <orderEntry type="library" exported="" name="Console2.6+asdoc" level="application" />
+    <orderEntry type="library" exported="" name="MonsterDebugger" level="application" />
   </component>
 </module>
 

@@ -26,6 +26,7 @@ package core.model.proxy {
 		public function get gameServerURL():String { return _valueObject.flashVars[FlashVarsVO.GAME_SERVER_URL];}
 		public function get playerID():String {return _valueObject.flashVars[FlashVarsVO.PLAYER_ID];}
 		public function get sid():String {return _valueObject.flashVars[FlashVarsVO.SID];}
+        public function get localisation():String {return _valueObject.flashVars[FlashVarsVO.LOCALISATION];}
 
 		public static const NAME:String = 'FlashVarsProxy';
 
@@ -53,5 +54,5 @@ package core.model.proxy {
 		}
 
 
-	} //end class
+    } //end class
 }//end package

@@ -13,7 +13,6 @@ package core.model.valueObjects {
 
         public var gameData : Object ;
 
-		public static const SID:String = 'sid';
 
 	} //end class
 }//end package

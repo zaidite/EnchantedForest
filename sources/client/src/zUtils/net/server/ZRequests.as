@@ -27,12 +27,18 @@ package zUtils.net.server {
 		private var _requestProcessing:IRequestProcessing;
 		private var _dataProcessing:IDataProcessing;
 		private var _proxySet:Object = {};
+        private var _showResponseInLog : Boolean ;
+
 
 
 		public function get defaultDataFormat():String {return _defaultDataFormat;}
 		public function get defaultRequestType():String {return _defaultRequestType;}
 
-		private static var _instance:ZRequests;
+        public function get showResponseInLog():Boolean {return _showResponseInLog;}
+
+        public function set showResponseInLog(value:Boolean):void {_showResponseInLog = value;}
+
+        private static var _instance:ZRequests;
 
 		//*********************** CONSTRUCTOR ***********************
 		public function ZRequests(secure:PrivateClass) {

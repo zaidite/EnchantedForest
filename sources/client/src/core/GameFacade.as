@@ -3,6 +3,7 @@ package core {
 
     import core.controllers.GameDataController;
     import core.model.proxy.FlashVarsProxy;
+    import core.model.proxy.GameDataProxy;
     import core.model.proxy.StandaloneDataProxy;
     import core.model.proxy.requests.GameDataRequest;
     import core.model.proxy.requests.SynchronizationRequest;
@@ -41,6 +42,7 @@ package core {
             super.initializeModel();
             registerProxy(new StandaloneDataProxy());
             registerProxy(new FlashVarsProxy());
+            registerProxy(new GameDataProxy());
         }
 
         //init 2
@@ -49,6 +51,9 @@ package core {
             registerCommand(GameNotifications.STARTUP, GameDataController);
             registerCommand(GameNotifications.NEED_STANDALONE_DATA, GameDataController);
             registerCommand(GameNotifications.GETTING_FLASH_VARS, GameDataController);
+            registerCommand(GameNotifications.GETTING_GAME_DATA, GameDataController);
+            registerCommand(GameNotifications.GETTING_PLAYER_DATA, GameDataController);
+            registerCommand(GameNotifications.GETTING_ASSETS_LIBS, GameDataController);
         }
 
         //init 3

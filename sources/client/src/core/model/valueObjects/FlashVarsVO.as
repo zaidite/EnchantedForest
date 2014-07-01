@@ -19,6 +19,8 @@ package core.model.valueObjects {
 		public static const GAME_SERVER_URL:String = 'gameServerURL';
 		public static const PLAYER_ID:String = 'playerID';
 		public static const SID:String = 'sid';
+		public static const LOCALISATION:String = 'locale';
+
 
 	} //end class
 }//end package
