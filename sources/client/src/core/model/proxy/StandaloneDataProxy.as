@@ -38,6 +38,8 @@ package core.model.proxy {
 
         public function get serverTimeSync():String {return _valueObject.jsOptions ? _valueObject.jsOptions.servers[StandaloneDataVO.TIME_SYNC_SERVER] : null}
         public function get requestDataFormat():String {return _valueObject.jsOptions ? _valueObject.jsOptions.settings[StandaloneDataVO.DATA_FORMAT] : null}
+        public function get player():Object {return _valueObject.jsOptions ? _valueObject.jsOptions[StandaloneDataVO.PLAYER] : null}
+        public function get friends():Object {return _valueObject.jsOptions ? _valueObject.jsOptions[StandaloneDataVO.FRIENDS] : null}
 
         private static const DELTA_THRESHOLD:Number = 1000;
 
@@ -86,7 +88,7 @@ package core.model.proxy {
         private function _initRequests():void {
             var defaultDataFormat:String = requestDataFormat;
             var syncServerURL:String = serverTimeSync;
-            GameFacade.instance().initRequests(defaultDataFormat, syncServerURL);
+            GameFacade.instance().initRequestCore(defaultDataFormat, syncServerURL);
         }
 
         private function _getDeltaTime():void {

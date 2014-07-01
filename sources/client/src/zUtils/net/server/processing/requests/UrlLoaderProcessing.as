@@ -98,8 +98,13 @@ package zUtils.net.server.processing.requests {
 
             //TODO add Logging
 
-            _currentProxy.requestError();
-            _currentProxy.onError();
+            if(_currentProxy.requestError != null) {
+                _currentProxy.requestError();
+            }
+
+            if(_currentProxy.onError != null) {
+                _currentProxy.onError();
+            }
 
 			if(_processingError != null) {
 				_processingError(_currentProxy, event.toString());

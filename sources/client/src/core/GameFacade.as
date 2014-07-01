@@ -4,8 +4,10 @@ package core {
     import core.controllers.GameDataController;
     import core.model.proxy.FlashVarsProxy;
     import core.model.proxy.GameDataProxy;
+    import core.model.proxy.PlayerDataProxy;
     import core.model.proxy.StandaloneDataProxy;
     import core.model.proxy.requests.GameDataRequest;
+    import core.model.proxy.requests.PlayerDataRequest;
     import core.model.proxy.requests.SynchronizationRequest;
     import core.view.GameViews;
 
@@ -43,6 +45,7 @@ package core {
             registerProxy(new StandaloneDataProxy());
             registerProxy(new FlashVarsProxy());
             registerProxy(new GameDataProxy());
+            registerProxy(new PlayerDataProxy());
         }
 
         //init 2
@@ -61,6 +64,8 @@ package core {
             super.initializeView();
             _gameViews = new GameViews();
 			Game.instance.addChild(_gameViews);
+
+
         }
 
         //init 4
@@ -69,11 +74,12 @@ package core {
             sendNotification(GameNotifications.STARTUP, Game.instance);
         }
 
-        public function initRequests(dataFormat:String, timeServerUrl:String):void {
+        public function initRequestCore(dataFormat:String, timeServerUrl:String):void {
         	ZRequests.manager().init(UrlLoaderProcessing.TYPE, dataFormat);
 
             ZRequests.manager().registerProxy(new SynchronizationRequest(timeServerUrl + "/sync"));
             ZRequests.manager().registerProxy(new GameDataRequest());
+            ZRequests.manager().registerProxy(new PlayerDataRequest());
         }
 
         public static function instance():GameFacade {

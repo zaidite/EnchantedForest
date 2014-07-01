@@ -1,30 +1,14 @@
 package core.model.proxy {
     import constants.GameNotifications;
 
-    import core.Core;
-    import core.GameFacade;
     import core.model.proxy.requests.GameDataRequest;
-    import core.model.proxy.requests.SynchronizationRequest;
     import core.model.valueObjects.GameDataVO;
-    import core.model.valueObjects.StandaloneDataVO;
 
     import flash.errors.IllegalOperationError;
-
-    import flash.events.Event;
-    import flash.events.IOErrorEvent;
-    import flash.net.URLLoader;
-    import flash.net.URLRequest;
-    import flash.net.URLVariables;
-    import flash.utils.getTimer;
 
     import org.puremvc.as3.interfaces.IProxy;
     import org.puremvc.as3.patterns.proxy.Proxy;
 
-    import settings.GameSettingsOld;
-
-    import utils.Median;
-
-    import zUtils.net.server.IRequestProxy;
     import zUtils.net.server.ZRequests;
 
     /**
@@ -33,12 +17,12 @@ package core.model.proxy {
      * author : Vitaliy Snitko
      * mail   : zaidite@gmail.com
      *
-     * description    : При загрузке клиента в standAlone режиме получает и формирует данные эмулирующие флешварсы при загрузке в браузере.
+     * description    : Получает, хранит и управляет данными игры.
      * responsibility :
      */
     public class GameDataProxy extends Proxy implements IProxy {
 
-        public function get dataReceived():Boolean {return Boolean(_valueObject.gameData);}
+        public function get dataReceived():Boolean {return Boolean(_valueObject.data);}
 
         private function get _valueObject():GameDataVO {return data as GameDataVO;}
 
@@ -54,13 +38,13 @@ package core.model.proxy {
         private function _saveGameData():void {
 
             var request:GameDataRequest = ZRequests.manager().getProxy(GameDataRequest.NAME) as GameDataRequest;
-            _valueObject.gameData = request.response;
+            _valueObject.data = request.response;
             sendNotification(GameNotifications.GETTING_GAME_DATA);
         }
 
         public function getGameData():void {
 
-            if(_valueObject.gameData) {
+            if(dataReceived) {
                 throw new IllegalOperationError('[GameDataProxy] getGameData() : gameData is already. ');
             }
 

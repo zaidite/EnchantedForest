@@ -15,6 +15,8 @@ package core.model.valueObjects {
 
         public static const TIME_SYNC_SERVER:String = 'timesync_server';
         public static const DATA_FORMAT:String = 'DATA_FORMAT';
+        public static const PLAYER:String = 'player';
+        public static const FRIENDS:String = 'friends';
 
 
 

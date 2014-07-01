@@ -9,7 +9,7 @@ package core.model.valueObjects {
 	 * class description    :
 	 * class responsibility :
 	 */
-	public class GameDataVO {
+	public class PlayerDataVO {
 
         public var data : Object ;
 

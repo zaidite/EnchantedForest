@@ -3,7 +3,10 @@ package core.controllers {
 
     import core.Core;
     import core.model.proxy.GameDataProxy;
+    import core.model.proxy.PlayerDataProxy;
     import core.model.proxy.StandaloneDataProxy;
+
+    import managers.Iframe;
 
     import org.puremvc.as3.interfaces.INotification;
     import org.puremvc.as3.patterns.command.SimpleCommand;
@@ -42,9 +45,10 @@ package core.controllers {
                     break;
 
                 case GameNotifications.GETTING_FLASH_VARS:
-                    Core.gameFacade.initRequests(Core.flashVarsProxy.dataFormat, Core.flashVarsProxy.timeServerURL);
+                    Core.gameFacade.initRequestCore(Core.flashVarsProxy.dataFormat, Core.flashVarsProxy.timeServerURL);
+                    Iframe.manager.initSocialData();
                     Core.gameDataProxy.getGameData();
-                    //запрос фетчплеер
+                    Core.playerDataProxy.getPlayerData();
                     //загрузка библиотек ассетов
                     break;
                 case GameNotifications.GETTING_GAME_DATA:
@@ -65,8 +69,16 @@ package core.controllers {
             if(!gameDataProxy.dataReceived) {
                 return;
             }
-
             trace('[GameDataController] :', '_checkAllDataLoading();  - gameDataProxy.dataReceived ');
+
+            var playerDataProxy:PlayerDataProxy = Core.playerDataProxy;
+            if(!playerDataProxy.dataReceived) {
+                return;
+            }
+            trace('[GameDataController] :', '_checkAllDataLoading();  - playerDataProxy.dataReceived ');
+
+
+
         }
 
 
