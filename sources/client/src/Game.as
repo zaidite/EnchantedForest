@@ -57,7 +57,7 @@ package {
         private function _initLogger():void {
             ZLogger.init().tracing();
             ZLogger.init().console(stage, '`');
-            ZLogger.init().monsterDebugger(stage);
+//            ZLogger.init().monsterDebugger(stage);
         }
 
     } //end class

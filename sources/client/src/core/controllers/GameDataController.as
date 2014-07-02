@@ -49,12 +49,13 @@ package core.controllers {
                     Iframe.manager.initSocialData();
                     Core.gameDataProxy.getGameData();
                     Core.playerDataProxy.getPlayerData();
-                    //загрузка библиотек ассетов
                     break;
                 case GameNotifications.GETTING_GAME_DATA:
+                    trace('[GameDataController] :', 'execute();  ', GameNotifications.GETTING_GAME_DATA);
                     _checkAllDataLoading();
                     break;
                 case GameNotifications.GETTING_PLAYER_DATA:
+                    trace('[GameDataController] :', 'execute();  ', GameNotifications.GETTING_PLAYER_DATA);
                     _checkAllDataLoading();
                     break;
                 case GameNotifications.GETTING_ASSETS_LIBS:
@@ -66,16 +67,16 @@ package core.controllers {
         private function _checkAllDataLoading() : void
         {
             var gameDataProxy:GameDataProxy = Core.gameDataProxy;
-            trace('[GameDataController] :', '_checkAllDataLoading();  - gameDataProxy.dataReceived ', gameDataProxy.dataReceived);
             if(!gameDataProxy.dataReceived) {
                 return;
             }
 
             var playerDataProxy:PlayerDataProxy = Core.playerDataProxy;
-            trace('[GameDataController] :', '_checkAllDataLoading();  - playerDataProxy.dataReceived ', playerDataProxy.dataReceived);
             if(!playerDataProxy.dataReceived) {
                 return;
             }
+
+            trace('[GameDataController] :', '_checkAllDataLoading(); All Data load !!!');
 
 
 

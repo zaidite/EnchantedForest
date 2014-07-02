@@ -6,6 +6,11 @@ package zUtils.net.server.processing.requests {
     import flash.net.URLLoaderDataFormat;
     import flash.net.URLRequest;
     import flash.net.URLRequestMethod;
+    import flash.system.ApplicationDomain;
+    import flash.system.Capabilities;
+    import flash.system.LoaderContext;
+    import flash.system.Security;
+    import flash.system.SecurityDomain;
     import flash.utils.Dictionary;
 
     import zUtils.net.server.IRequestProxy;

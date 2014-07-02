@@ -3,10 +3,7 @@ package managers {
     import core.model.proxy.StandaloneDataProxy;
 
     import flash.external.ExternalInterface;
-
     import flash.system.Capabilities;
-
-    import utils.StringUtils;
 
     /**
      * Date   : 01.07.2014
@@ -24,7 +21,7 @@ package managers {
 
         private static var _instance:Iframe;
 
-        private static const EXTERNAL_METHOD_PATTERN:String = 'Cherry.application.game.{0}';
+        private static const EXTERNAL_METHOD:String = 'Cherry.application.game.';
 
         //*********************** CONSTRUCTOR ***********************
         public function Iframe(secure:PrivateClass) {
@@ -35,7 +32,8 @@ package managers {
 
         private function _callExternal(method:String, ...args):Object {
             if (ExternalInterface.available) {
-                args.unshift(StringUtils.format(EXTERNAL_METHOD_PATTERN, method));
+                var method:String = EXTERNAL_METHOD + method;
+                args.unshift(method);
                 return ExternalInterface.call.apply(null, args);
             }
             return null;
