@@ -6,124 +6,117 @@ package zUtils.net.server.processing.requests {
     import flash.net.URLLoaderDataFormat;
     import flash.net.URLRequest;
     import flash.net.URLRequestMethod;
+    import flash.utils.Dictionary;
 
     import zUtils.net.server.IRequestProxy;
     import zUtils.net.server.processing.data.IDataProcessing;
+    import zUtils.service.ZLogger;
 
     /**
-	 * Date   :  02.03.14
-	 * Time   :  19:40
-	 * author :  Vitaliy Snitko
-	 * mail   :  zaidite@gmail.com
-	 *
-	 * class description    :
-	 * class responsibility :
-	 */
-	public class UrlLoaderProcessing implements IRequestProcessing {
+     * Date   :  02.03.14
+     * Time   :  19:40
+     * author :  Vitaliy Snitko
+     * mail   :  zaidite@gmail.com
+     *
+     * class description    :
+     * class responsibility :
+     */
+    public class UrlLoaderProcessing implements IRequestProcessing {
 
-		private var _request:URLRequest;
-		private var _method:String;
-		private var _loader:URLLoader;
-		private var _currentProxy:IRequestProxy;
-		private var _dataFormat:String;
-		private var _dataProcessing:IDataProcessing;
-		private var _processingComplete:Function;
-		private var _processingError:Function;
+        private var _method:String;
+        private var _dataFormat:String;
+        private var _dataProcessing:IDataProcessing;
+        private var _processingComplete:Function;
+        private var _processingError:Function;
+        private var _activeRequests:Dictionary = new Dictionary();
 
-		public static const TYPE:String = 'urlRequest';
+        public static const TYPE:String = 'urlRequest';
 
-		//*********************** CONSTRUCTOR ***********************
-		public function UrlLoaderProcessing(dataProcessing:IDataProcessing, onComplete:Function, onError:Function) {
-			_dataProcessing = dataProcessing;
-			_method = URLRequestMethod.POST;
-			_dataFormat = URLLoaderDataFormat.BINARY;
-			_processingComplete = onComplete;
-			_processingError = onError;
-		}
-		//***********************************************************
+        //*********************** CONSTRUCTOR ***********************
+        public function UrlLoaderProcessing(dataProcessing:IDataProcessing, onComplete:Function, onError:Function) {
+            _dataProcessing = dataProcessing;
+            _method = URLRequestMethod.POST;
+            _dataFormat = URLLoaderDataFormat.BINARY;
+            _processingComplete = onComplete;
+            _processingError = onError;
+        }
 
-		public function start(proxy:IRequestProxy):void {
-			_currentProxy = proxy;
-            _currentProxy.response = null;
+        //***********************************************************
 
-			var request:URLRequest = _getRequest();
-			request.url = _currentProxy.url;
+        public function start(proxy:IRequestProxy):void {
 
-			if(_currentProxy.params) {
-				request.data = _dataProcessing.encode(_currentProxy.params);
-			}
+            var request:URLRequest = new URLRequest();
+            request.method = _method;
+            request.data = proxy.params ? _dataProcessing.encode(proxy.params) : null;
+            request.url = proxy.url;
 
-			var loader:URLLoader = _getLoader();
-			loader.addEventListener(Event.COMPLETE, _onLoadComplete);
-			loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
-			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
-			loader.load(request);
-		}
+            var loader:URLLoader = new URLLoader();
+            loader.dataFormat = _dataFormat;
+            loader.addEventListener(Event.COMPLETE, _onLoadComplete);
+            loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
+            loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
 
+            _activeRequests[loader] = proxy;
+            loader.load(request);
+        }
 
-		public function clearData():void {
-            //TODO realization
-		}
+        private function _onSecurityError(event:SecurityErrorEvent):void {
 
-		private function _getRequest():URLRequest {
-			if(!_request) {
-				_request = new URLRequest();
-				_request.method = _method;
-			}
-			return _request;
-		}
+            ZLogger.error('[UrlLoaderProcessing] :', '_onSecurityError();  ', arguments);
 
-		private function _getLoader():URLLoader {
-			if(!_loader) {
-				_loader = new URLLoader();
-				_loader.dataFormat = _dataFormat;
-				_loader.addEventListener(Event.COMPLETE, _onLoadComplete);
-				_loader.addEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
-				_loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
-			}
-			return _loader;
-		}
-
-
-		private function _onSecurityError(event:SecurityErrorEvent):void {
-
-            //TODO add Logging
-
-			if(_processingError != null) {
-				_processingError(_currentProxy, event.toString());
-			}
-			_currentProxy = null;
-		}
-		private function _onLoadFail(event:IOErrorEvent):void {
-
-            //TODO add Logging
-
-            if(_currentProxy.requestError != null) {
-                _currentProxy.requestError();
+            var requestProxy:IRequestProxy = _activeRequests[event.target];
+            if (_processingError != null) {
+                _processingError(requestProxy, event.toString());
             }
 
-            if(_currentProxy.onError != null) {
-                _currentProxy.onError();
+            _clearLoader(event.target as URLLoader);
+        }
+
+        private function _onLoadFail(event:IOErrorEvent):void {
+
+            ZLogger.error('[UrlLoaderProcessing] :', '_onLoadFail();', arguments);
+
+            var requestProxy:IRequestProxy = _activeRequests[event.target];
+
+            if (requestProxy.requestError != null) {
+                requestProxy.requestError();
             }
 
-			if(_processingError != null) {
-				_processingError(_currentProxy, event.toString());
-			}
-			_currentProxy = null;
-		}
-		private function _onLoadComplete(event:Event):void {
+            if (requestProxy.onError != null) {
+                requestProxy.onError();
+            }
 
-            //TODO add Logging
+            if (_processingError != null) {
+                _processingError(requestProxy, event.toString());
+            }
 
-            _currentProxy.response = _dataProcessing.decode(event.target.data);
-            _currentProxy.onComplete();
+            _clearLoader(event.target as URLLoader);
+        }
 
-			if(_processingComplete != null) {
-				_processingComplete(_currentProxy);
-			}
-			_currentProxy = null;
+        private function _onLoadComplete(event:Event):void {
+            var requestProxy:IRequestProxy = _activeRequests[event.target];
+//            ZLogger.info('[UrlLoaderProcessing] :', '_onLoadComplete();', requestProxy.name);
 
-		}
+            requestProxy.response = _dataProcessing.decode(event.target.data);
+            requestProxy.onComplete();
 
-	} //end class
+            if (_processingComplete != null) {
+                _processingComplete(requestProxy);
+            }
+
+            _clearLoader(event.target as URLLoader);
+        }
+
+        private function _clearLoader(loader:URLLoader):void {
+            loader.removeEventListener(Event.COMPLETE, _onLoadComplete);
+            loader.removeEventListener(IOErrorEvent.IO_ERROR, _onLoadFail);
+            loader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityError);
+            loader = null;
+
+            delete _activeRequests[loader];
+        }
+
+        public function clearData():void {
+        }
+    } //end class
 }//end package

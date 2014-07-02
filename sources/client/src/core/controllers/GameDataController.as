@@ -66,16 +66,16 @@ package core.controllers {
         private function _checkAllDataLoading() : void
         {
             var gameDataProxy:GameDataProxy = Core.gameDataProxy;
+            trace('[GameDataController] :', '_checkAllDataLoading();  - gameDataProxy.dataReceived ', gameDataProxy.dataReceived);
             if(!gameDataProxy.dataReceived) {
                 return;
             }
-            trace('[GameDataController] :', '_checkAllDataLoading();  - gameDataProxy.dataReceived ');
 
             var playerDataProxy:PlayerDataProxy = Core.playerDataProxy;
+            trace('[GameDataController] :', '_checkAllDataLoading();  - playerDataProxy.dataReceived ', playerDataProxy.dataReceived);
             if(!playerDataProxy.dataReceived) {
                 return;
             }
-            trace('[GameDataController] :', '_checkAllDataLoading();  - playerDataProxy.dataReceived ');
 
 
 

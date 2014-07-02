@@ -50,7 +50,6 @@ package core.model.proxy {
 
             var request:GameDataRequest = ZRequests.manager().getProxy(GameDataRequest.NAME) as GameDataRequest;
             request.initRequestData();
-
             request.requestComplete = _saveGameData;
             ZRequests.manager().requestStart(request);
         }

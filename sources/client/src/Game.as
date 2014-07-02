@@ -22,8 +22,7 @@ package {
     [SWF(pageTitle="Main", width="760", height="670", widthPercent="100", heightPercent="100", frameRate="120", backgroundColor="#209803")]
     public class Game extends Sprite {
 
-		public static var instance : Game ;
-
+        public static var instance:Game;
 
         //*********************** CONSTRUCTOR ***********************
         public function Game() {
@@ -41,7 +40,8 @@ package {
             if (!stage || !stage.stageWidth || !stage.stageHeight)return;
             removeEventListener(Event.ENTER_FRAME, _initData);
 
-			instance = this;
+            instance = this;
+            _initLogger();
 
             Security.allowDomain('*');
             Security.allowInsecureDomain('*');
@@ -52,6 +52,12 @@ package {
             ZLogger.init();
             GameFacade.instance().startup();
 
+        }
+
+        private function _initLogger():void {
+            ZLogger.init().tracing();
+            ZLogger.init().console(stage, '`');
+            ZLogger.init().monsterDebugger(stage);
         }
 
     } //end class
