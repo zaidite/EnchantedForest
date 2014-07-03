@@ -20,6 +20,9 @@
             <entry library-name="MonsterDebugger" library-level="application">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-name="starling" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
           <sdk name="4.6" />
         </dependencies>
@@ -47,6 +50,7 @@
     <orderEntry type="library" exported="" name="bulk_loader" level="project" />
     <orderEntry type="library" exported="" name="Console2.6+asdoc" level="application" />
     <orderEntry type="library" exported="" name="MonsterDebugger" level="application" />
+    <orderEntry type="library" exported="" name="starling" level="application" />
   </component>
 </module>
 

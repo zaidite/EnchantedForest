@@ -1,11 +1,15 @@
 package {
     import core.GameFacade;
+    import core.GameStarling;
 
     import flash.display.Sprite;
     import flash.display.StageAlign;
     import flash.display.StageScaleMode;
+    import flash.display3D.Context3DRenderMode;
     import flash.events.Event;
     import flash.system.Security;
+
+    import starling.core.Starling;
 
     import zUtils.service.ZLogger;
 
@@ -23,6 +27,7 @@ package {
     public class Game extends Sprite {
 
         public static var instance:Game;
+        private var _starling:Starling;
 
         //*********************** CONSTRUCTOR ***********************
         public function Game() {
@@ -50,14 +55,20 @@ package {
             stage.align = StageAlign.TOP_LEFT;
 
             ZLogger.init();
-            GameFacade.instance().startup();
+            _initStarling();
+        }
 
+        private function _initStarling():void {
+            _starling = new Starling(GameStarling, stage, null, null, Context3DRenderMode.AUTO);
+            _starling.simulateMultitouch = true;
+            _starling.antiAliasing = 2;
+            _starling.showStats = false;
+            _starling.start();
         }
 
         private function _initLogger():void {
             ZLogger.init().tracing();
             ZLogger.init().console(stage, '`');
-//            ZLogger.init().monsterDebugger(stage);
         }
 
     } //end class

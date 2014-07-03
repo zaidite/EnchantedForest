@@ -2,6 +2,7 @@ package core {
     import constants.GameNotifications;
 
     import core.controllers.GameDataController;
+    import core.model.proxy.DebugDataProxy;
     import core.model.proxy.FlashVarsProxy;
     import core.model.proxy.GameDataProxy;
     import core.model.proxy.PlayerDataProxy;
@@ -42,6 +43,7 @@ package core {
         //init 1
         override protected function initializeModel():void {
             super.initializeModel();
+            registerProxy(new DebugDataProxy());
             registerProxy(new StandaloneDataProxy());
             registerProxy(new FlashVarsProxy());
             registerProxy(new GameDataProxy());
@@ -63,7 +65,7 @@ package core {
         override protected function initializeView():void {
             super.initializeView();
             _gameViews = new GameViews();
-			Game.instance.addChild(_gameViews);
+			GameStarling.instance.addChild(_gameViews);
 
 
         }

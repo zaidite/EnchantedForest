@@ -1,7 +1,7 @@
 package core.view {
-	import flash.display.Sprite;
+    import starling.display.Sprite;
 
-	/**
+    /**
 	 * Date   :  02.03.14
 	 * Time   :  12:32
 	 * author :  Vitaliy Snitko
