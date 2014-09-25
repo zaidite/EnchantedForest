@@ -1,8 +1,8 @@
 package core {
-    import starling.display.Sprite;
-    import starling.events.Event;
+import flash.display.Sprite;
+import flash.events.Event;
 
-    /**
+/**
      * Date   : 03.07.2014
      * Time   : 10:23
      * author : Vitaliy Snitko

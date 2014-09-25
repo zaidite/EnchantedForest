@@ -3,7 +3,7 @@
   <component name="FlexBuildConfigurationManager" active="project-home">
     <configurations>
       <configuration name="project-home" main-class="Game" output-file="game.swf" output-folder="$MODULE_DIR$/../sources/static">
-        <dependencies target-player="12.0">
+        <dependencies target-player="11.1">
           <entries>
             <entry library-name="bulk_loader" library-level="project">
               <dependency linkage="Merged" />
@@ -24,7 +24,7 @@
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="Apache 4.11" />
+          <sdk name="4.6" />
         </dependencies>
         <compiler-options>
           <map>
@@ -43,8 +43,9 @@
     <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/../sources">
       <sourceFolder url="file://$MODULE_DIR$/../sources/client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../sources/client/libs/tools/Gamua-Starling-Framework-def24cc/starling/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Apache 4.11" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="4.6" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="bulk_loader" level="project" />
     <orderEntry type="library" exported="" name="Console2.6" level="project" />
