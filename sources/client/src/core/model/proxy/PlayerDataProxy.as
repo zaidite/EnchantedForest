@@ -24,7 +24,7 @@ package core.model.proxy {
      */
     public class PlayerDataProxy extends Proxy implements IProxy {
 
-        public function get dataReceived():Boolean {return Boolean(_valueObject.data);}
+        public function get dataReceived():Boolean {return Boolean(_valueObject.playerData);}
 
         private function get _valueObject():PlayerDataVO {return data as PlayerDataVO;}
 
@@ -40,7 +40,7 @@ package core.model.proxy {
         private function _savePlayerData():void {
 
             var request:PlayerDataRequest = ZRequests.manager().getProxy(PlayerDataRequest.NAME) as PlayerDataRequest;
-            _valueObject.data = request.response;
+            _valueObject.playerData = request.response;
             sendNotification(GameNotifications.GETTING_PLAYER_DATA);
         }
 

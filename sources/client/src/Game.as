@@ -54,7 +54,6 @@ package {
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.align = StageAlign.TOP_LEFT;
 
-            ZLogger.init();
             _initStarling();
         }
 
@@ -67,8 +66,8 @@ package {
         }
 
         private function _initLogger():void {
-            ZLogger.init().tracing();
-            ZLogger.init().console(stage, '`');
+            ZLogger.init.tracing();
+            ZLogger.init.console(stage, '`');
         }
 
     } //end class

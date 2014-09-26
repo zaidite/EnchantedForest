@@ -11,7 +11,7 @@ package core.model.valueObjects {
 	 */
 	public class GameDataVO {
 
-        public var data : Object ;
+        public var gameData : Object ;
 
 
 	} //end class

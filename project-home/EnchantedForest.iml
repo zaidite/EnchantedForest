@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="EnchantedForest">
+    <configurations>
+      <configuration name="EnchantedForest" pure-as="true" main-class="Game" output-file="game.swf" output-folder="$MODULE_DIR$/../sources/static">
+        <dependencies target-player="12.0">
+          <entries>
+            <entry library-name="Console2.6+asdoc" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="MonsterDebugger" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="PureMVC_AS3_2_0_4" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="assets" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="Apache 4.11" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.define" value="CONFIG::USERS&#9;true&#10;CONFIG::USER_ID_MM&#9;'9b6254841e37a1b'&#10;CONFIG::USER_ID_VK&#9;'44e0fc9eeaf401b'&#10;CONFIG::USER_ID_FB&#9;'bfb863ac7fb3b91'&#10;CONFIG::USER_ID_BACKDOOR&#9;'9b6254841e37a1b'&#10;CONFIG::USER_ID_CUSTOMBRANCH&#9;'27885dc6f9cd57fea9'&#10;CONFIG::time&#9;'time'&#10;CONFIG::debug&#9;true" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/..">
+      <sourceFolder url="file://$MODULE_DIR$/../sources/client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../sources/client/libs/tools/Gamua-Starling-Framework-def24cc/starling/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../../ZProjects">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../ZProjects/ZNet/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../ZProjects/ZServices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../ZProjects/ZMouse/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../ZProjects/ZContent/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Apache 4.11" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Console2.6+asdoc" level="application" />
+    <orderEntry type="library" exported="" name="MonsterDebugger" level="application" />
+    <orderEntry type="library" exported="" name="PureMVC_AS3_2_0_4" level="application" />
+    <orderEntry type="library" exported="" name="assets" level="project" />
+  </component>
+</module>
+
