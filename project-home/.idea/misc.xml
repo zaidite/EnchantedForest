@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="IdProvider" IDEtalkID="BAF9D286F4DAEB1C35BD5D2AE909FF14" />
+  <component name="CopyrightManager" default="" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Apache 4.11" project-jdk-type="Flex SDK Type (new)">
-    <output url="file://$PROJECT_DIR$/../sources/output" />
+    <output url="file://$PROJECT_DIR$/../sources/static" />
   </component>
 </project>
 

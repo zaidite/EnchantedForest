@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="bulk_loader" type="flex">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../sources/client/libs/tools/bulkloader/bulk_loader.swc!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
