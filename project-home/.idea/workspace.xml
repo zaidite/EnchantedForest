@@ -2,56 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e762e97-efe7-4c09-8323-c7664f72f8fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/assets.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Console2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/EazeTween_rc2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/MonsterDebugger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/PureMVC_AS3_2_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bulk_loader.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/preloader.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project-home.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/contentManager/ZContent.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/contentManager/ZContentFinder.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/contentManager/ZContentItem.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/interactive/interactiveTargets/ZInteractiveTarget.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/interactive/mouseManager/IZMouseTarget.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/interactive/mouseManager/ZMouseManager.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/interactive/mouseManager/ZMouseTarget.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/IRequestProxy.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/RequestProxy.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/ZRequests.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/data/AMF3Processing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/data/IDataProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/data/JSONProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/data/XJSONProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/data/YAMLProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/requests/IRequestProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/requests/NetConnectionProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/net/server/processing/requests/UrlLoaderProcessing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/Alert.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZCallbacks.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZFilters.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZLogger.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZObjects.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZParsing.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../sources/client/src/zUtils/service/ZUtils.as" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../ZProjects/Common/Assets/ВОССТАНОВИТЬ_Butterfly.fla" afterPath="$PROJECT_DIR$/../../../../ZProjects/Common/Assets/ВОССТАНОВИТЬ_Butterfly.fla" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../ZProjects/Common/Assets/ВОССТАНОВИТЬ_ContentLib.fla" afterPath="$PROJECT_DIR$/../../../../ZProjects/Common/Assets/ВОССТАНОВИТЬ_ContentLib.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/Game.as" afterPath="$PROJECT_DIR$/../sources/client/src/Game.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/core/model/proxy/GameDataProxy.as" afterPath="$PROJECT_DIR$/../sources/client/src/core/model/proxy/GameDataProxy.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/core/model/valueObjects/GameDataVO.as" afterPath="$PROJECT_DIR$/../sources/client/src/core/model/valueObjects/GameDataVO.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/core/GameStarling.as" afterPath="$PROJECT_DIR$/../sources/client/src/core/GameStarling.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/core/model/proxy/PlayerDataProxy.as" afterPath="$PROJECT_DIR$/../sources/client/src/core/model/proxy/PlayerDataProxy.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sources/client/src/core/model/valueObjects/PlayerDataVO.as" afterPath="$PROJECT_DIR$/../sources/client/src/core/model/valueObjects/PlayerDataVO.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../ZProjects/ZServices/src/zUtils/service/ZParsing.as" afterPath="$PROJECT_DIR$/../../../../ZProjects/ZServices/src/zUtils/service/ZParsing.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../ZProjects/ZNet/mac/mac.iml" afterPath="$PROJECT_DIR$/../../../../ZProjects/ZNet/mac/mac.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../ZProjects/ZNet/mac/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../ZProjects/ZNet/mac/.idea/workspace.xml" />
     </list>
     <ignored path="EnchantedForest.iws" />
@@ -461,7 +415,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27181688" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27181688" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
