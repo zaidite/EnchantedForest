@@ -66,8 +66,6 @@ package core {
             super.initializeView();
             _gameViews = new GameViews();
 			GameStarling.instance.addChild(_gameViews);
-
-
         }
 
         //init 4

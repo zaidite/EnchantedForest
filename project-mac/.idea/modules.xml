@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EnchantedForest.iml" filepath="$PROJECT_DIR$/EnchantedForest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-mac.iml" filepath="$PROJECT_DIR$/project-mac.iml" />
     </modules>
   </component>
 </project>

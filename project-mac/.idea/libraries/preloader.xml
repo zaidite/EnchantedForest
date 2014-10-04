@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="preloader" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../sources/client/libs/assets/preloader.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
